@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -100,28 +100,6 @@
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
     </a>
     
   </li>
@@ -203,28 +181,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
 		</a>
           
         </li>
@@ -428,12 +384,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -459,22 +428,134 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="prjSearchTool组件"><a href="#prjSearchTool组件" class="headerlink" title="prjSearchTool组件"></a>prjSearchTool组件</h1><p><strong>index.vue</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template src&#x3D;&quot;.&#x2F;index.html&quot;&gt;&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang&#x3D;&quot;ts&quot;&gt;</span><br><span class="line">import &#123;Vue,Watch,Prop,Component&#125; from &#39;vue-property-decorator&#39;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class ReviewPreviewv extends Vue&#123;</span><br><span class="line">	@Prop(&#123; defalut: ()&#x3D;&gt; []&#125;) readonly searchToolsItems!: any[]</span><br><span class="line">	&#x2F;&#x2F;  当不传数据时默认为空数组</span><br><span class="line">	</span><br><span class="line">	formInline: object &#x3D; &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	create() &#123;</span><br><span class="line">		console.log(this.searchToolItems)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Emit(&#39;getTableData&#39;)</span><br><span class="line">	onSubmit() &#123;</span><br><span class="line">		return this.formInline</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; src&#x3D;&quot;.&#x2F;index.scss&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template src<span class="token operator">=</span><span class="token string">"./index.html"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
 
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>Vue<span class="token punctuation">,</span>Watch<span class="token punctuation">,</span>Prop<span class="token punctuation">,</span>Component<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+
+@Component
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">ReviewPreviewv</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> defalut<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span> readonly searchToolsItems<span class="token operator">!</span><span class="token punctuation">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true">//  当不传数据时默认为空数组</span>
+
+    formInline<span class="token punctuation">:</span> object <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+    <span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>searchToolItems<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+    @<span class="token function">Emit</span><span class="token punctuation">(</span><span class="token string">'getTableData'</span><span class="token punctuation">)</span>
+    <span class="token function">onSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formInline
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> src<span class="token operator">=</span><span class="token string">"./index.scss"</span><span class="token operator">></span></code></pre>
 <p><strong>index.html</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;el-form :inline&#x3D;&quot;true&quot; :model&#x3D;&quot;formInline&quot; class&#x3D;&quot;demo-form-inline&quot;&gt;</span><br><span class="line">		&lt;el-form-item</span><br><span class="line">			v-for &#x3D; &quot;item in searchToolItems&quot;</span><br><span class="line">			:key &#x3D; &quot;item.prop&quot;</span><br><span class="line">			:label &#x3D; &quot;item.label&quot;</span><br><span class="line">		&gt;</span><br><span class="line">			&lt;el-select</span><br><span class="line">				v-if &#x3D; &quot;item.type &#x3D;&#x3D;&#x3D; &#39;select&#39;&quot;</span><br><span class="line">				v-model &#x3D; &quot;formInline[item.prop]&quot;</span><br><span class="line">				placeholder &#x3D; &quot;请选择&quot;</span><br><span class="line">				clearable</span><br><span class="line">			&gt;</span><br><span class="line">				&lt;el-option</span><br><span class="line">					v-for &#x3D; &quot;option in item.options&quot;</span><br><span class="line">					:key &#x3D; &quot;option.value&quot;</span><br><span class="line">					:value &#x3D; &quot;option.value&quot;</span><br><span class="line">				&gt;</span><br><span class="line">				&lt;&#x2F;el-option&gt;</span><br><span class="line">			&lt;&#x2F;el-select&gt;</span><br><span class="line">			&lt;el-input</span><br><span class="line">				v-else-if &#x3D; &quot;item.type &#x3D;&#x3D;&#x3D; &#39;input&#39;&quot;</span><br><span class="line">				v-model &#x3D; &quot;fromInline[item.prop]&quot;</span><br><span class="line">				placehodler</span><br><span class="line">				clearable</span><br><span class="line">			&gt;</span><br><span class="line">			&lt;&#x2F;el-input&gt;</span><br><span class="line">		&lt;&#x2F;el-form-item&gt;</span><br><span class="line">		&lt;el-form-item&gt;</span><br><span class="line">			&lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;onSubmit&quot;&gt;查询&lt;&#x2F;el-button&gt;</span><br><span class="line">		&lt;&#x2F;el-form-item&gt;</span><br><span class="line">	&lt;&#x2F;el-form&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
+<pre><code> &lt;div&gt;
+     &lt;el-form :inline=&quot;true&quot; :model=&quot;formInline&quot; class=&quot;demo-form-inline&quot;&gt;
+         &lt;el-form-item
+             v-for = &quot;item in searchToolItems&quot;
+             :key = &quot;item.prop&quot;
+             :label = &quot;item.label&quot;
+         &gt;
+             &lt;el-select
+                 v-if = &quot;item.type === &#39;select&#39;&quot;
+                 v-model = &quot;formInline[item.prop]&quot;
+                 placeholder = &quot;请选择&quot;
+                 clearable
+             &gt;
+                 &lt;el-option
+                     v-for = &quot;option in item.options&quot;
+                     :key = &quot;option.value&quot;
+                     :value = &quot;option.value&quot;
+                 &gt;
+                 &lt;/el-option&gt;
+             &lt;/el-select&gt;
+             &lt;el-input
+                 v-else-if = &quot;item.type === &#39;input&#39;&quot;
+                 v-model = &quot;fromInline[item.prop]&quot;
+                 placehodler
+                 clearable
+             &gt;
+             &lt;/el-input&gt;
+         &lt;/el-form-item&gt;
+         &lt;el-form-item&gt;
+             &lt;el-button type=&quot;primary&quot; @click=&quot;onSubmit&quot;&gt;查询&lt;/el-button&gt;
+         &lt;/el-form-item&gt;
+     &lt;/el-form&gt;
+ &lt;/div&gt;</code></pre>
 <h2 id="调用组件"><a href="#调用组件" class="headerlink" title="调用组件"></a>调用组件</h2><p>index.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;prj-search-tool</span><br><span class="line">		:searchToolItems &#x3D; &#39;searchToolItems&#39;</span><br><span class="line">		@getTableData &#x3D; &#39;onSubmit&#39;</span><br><span class="line">	&gt;</span><br><span class="line">	&lt;&#x2F;prj-search-tool&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
+<pre><code>&lt;div&gt;
+    &lt;prj-search-tool
+        :searchToolItems = &#39;searchToolItems&#39;
+        @getTableData = &#39;onSubmit&#39;
+    &gt;
+    &lt;/prj-search-tool&gt;
+&lt;/div&gt;</code></pre>
 <p>index.vue</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;template src&#x3D;&quot;.&#x2F;index.html&quot;&gt;&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang&#x3D;&quot;ts&quot;&gt;</span><br><span class="line">import &#123;Vue,Watch,Prop,Component&#125; from &#39;vue-property-decorator&#39;</span><br><span class="line">import &#123;searchToolItems&#125; from &#39;.&#x2F;mock.ts&#39;</span><br><span class="line">import PrjSearchTool from &#39;..&#x2F;..&#x2F;components&#x2F;prjSearchTool&#x2F;index.vue&#39;</span><br><span class="line">@Component(&#123;</span><br><span class="line">	&#39;prj-search-tool&#39;: PrjSearchTool</span><br><span class="line">&#125;)</span><br><span class="line">export default class ReviewPreviewv extends Vue&#123;</span><br><span class="line">	searchToolItems: any &#x3D; searchToolItems</span><br><span class="line">	formInline: &#123;</span><br><span class="line">		faqiren: &#39;&#39;,</span><br><span class="line">		leixing: &#39;&#39;,</span><br><span class="line">		jieduan: &#39;&#39;,</span><br><span class="line">		zhuangtai: &#39;&#39;,</span><br><span class="line">		jiancheng: &#39;&#39;</span><br><span class="line">	&#125;</span><br><span class="line">	onSubmit(formInine) &#123;</span><br><span class="line">		console.log(formInline.faqiren)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; src&#x3D;&quot;.&#x2F;index.scss&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;template src=&quot;./index.html&quot;&gt;&lt;/template&gt;
 
+&lt;script lang=&quot;ts&quot;&gt;
+import &#123;Vue,Watch,Prop,Component&#125; from &#39;vue-property-decorator&#39;
+import &#123;searchToolItems&#125; from &#39;./mock.ts&#39;
+import PrjSearchTool from &#39;../../components/prjSearchTool/index.vue&#39;
+@Component(&#123;
+    &#39;prj-search-tool&#39;: PrjSearchTool
+&#125;)
+export default class ReviewPreviewv extends Vue&#123;
+    searchToolItems: any = searchToolItems
+    formInline: &#123;
+        faqiren: &#39;&#39;,
+        leixing: &#39;&#39;,
+        jieduan: &#39;&#39;,
+        zhuangtai: &#39;&#39;,
+        jiancheng: &#39;&#39;
+    &#125;
+    onSubmit(formInine) &#123;
+        console.log(formInline.faqiren)
+    &#125;
+&#125;
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot; src=&quot;./index.scss&quot;&gt;</code></pre>
 <p>mock.ts</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">export const searchToolItems &#x3D; [</span><br><span class="line">	&#123;</span><br><span class="line">		prop: &#39;faqiren&#39;,</span><br><span class="line">		label: &#39;发起人&#39;,</span><br><span class="line">		type: &#39;input&#39;</span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		prop: &#39;leixing&#39;,</span><br><span class="line">		label: &#39;产品类型&#39;,</span><br><span class="line">		type: &#39;select&#39;,</span><br><span class="line">		options: [</span><br><span class="line">			&#123;</span><br><span class="line">				value: &#39;111&#39;,</span><br><span class="line">				label: &#39;1111&#39;</span><br><span class="line">			&#125;,</span><br><span class="line">			&#123;</span><br><span class="line">				value: &#39;2222&#39;,</span><br><span class="line">				label: &#39;111&#39;</span><br><span class="line">			&#125;	</span><br><span class="line">		]</span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		prop: &#39;jiancheng&#39;,</span><br><span class="line">		label: &#39;项目简称&#39;,</span><br><span class="line">		type: &#39;input&#39;</span><br><span class="line">	&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h1 id="覆盖组件中的具名插槽"><a href="#覆盖组件中的具名插槽" class="headerlink" title="覆盖组件中的具名插槽"></a>覆盖组件中的具名插槽</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template slot &#x3D; &#39;operate&#39;&gt;</span><br><span class="line">	&lt;el-dropdown split-button type&#x3D;&#39;primary&#39; @click&#x3D;&#39;elDownClick&#39; trigger &#x3D; &#39;click&#39;&gt; 查看</span><br><span class="line">	&lt;el-dropdown-menu slot &#x3D; &#39;dropdown&#39;&gt;</span><br><span class="line">		&lt;el-dropdown-item @click.native&#x3D;&#39;elDownClick1&#39;&gt;1111&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">		&lt;el-dropdown-item @click.native&#x3D;&#39;elDownClick2&#39;&gt;2222&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">	&lt;&#x2F;el-dropdown-menu&gt;</span><br><span class="line">	&lt;&#x2F;el-dropdown&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
-
+<pre><code>export const searchToolItems = [
+    &#123;
+        prop: &#39;faqiren&#39;,
+        label: &#39;发起人&#39;,
+        type: &#39;input&#39;
+    &#125;,
+    &#123;
+        prop: &#39;leixing&#39;,
+        label: &#39;产品类型&#39;,
+        type: &#39;select&#39;,
+        options: [
+            &#123;
+                value: &#39;111&#39;,
+                label: &#39;1111&#39;
+            &#125;,
+            &#123;
+                value: &#39;2222&#39;,
+                label: &#39;111&#39;
+            &#125;    
+        ]
+    &#125;,
+    &#123;
+        prop: &#39;jiancheng&#39;,
+        label: &#39;项目简称&#39;,
+        type: &#39;input&#39;
+    &#125;
+]</code></pre>
+<h1 id="覆盖组件中的具名插槽"><a href="#覆盖组件中的具名插槽" class="headerlink" title="覆盖组件中的具名插槽"></a>覆盖组件中的具名插槽</h1><pre><code>&lt;template slot = &#39;operate&#39;&gt;
+    &lt;el-dropdown split-button type=&#39;primary&#39; @click=&#39;elDownClick&#39; trigger = &#39;click&#39;&gt; 查看
+    &lt;el-dropdown-menu slot = &#39;dropdown&#39;&gt;
+        &lt;el-dropdown-item @click.native=&#39;elDownClick1&#39;&gt;1111&lt;/el-dropdown-item&gt;
+        &lt;el-dropdown-item @click.native=&#39;elDownClick2&#39;&gt;2222&lt;/el-dropdown-item&gt;
+    &lt;/el-dropdown-menu&gt;
+    &lt;/el-dropdown&gt;
+&lt;/template&gt;</code></pre>
 
             </div>
             <hr/>
@@ -490,7 +571,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">杨铭</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -513,7 +594,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">杨铭</a>
                     !
                 </span>
             </div>
@@ -537,7 +618,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -703,18 +788,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/09/21/test/">
+                <a href="/2020/09/22/webpack/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="webpack">
                         
-                        <span class="card-title">test</span>
+                        <span class="card-title">webpack</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -724,18 +808,29 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -768,7 +863,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            杨铭
                             
                         </span>
                     </div>
@@ -789,8 +884,6 @@
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
 
 <!-- 代码块复制 -->
 
@@ -799,14 +892,8 @@
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
 
 <!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
 
 
     </div>
@@ -912,65 +999,11 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">杨铭</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
