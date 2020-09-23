@@ -428,30 +428,30 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="prjSearchTool组件"><a href="#prjSearchTool组件" class="headerlink" title="prjSearchTool组件"></a>prjSearchTool组件</h1><p><strong>index.vue</strong></p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template src<span class="token operator">=</span><span class="token string">"./index.html"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+<pre><code>&lt;template src=&quot;./index.html&quot;&gt;&lt;/template&gt;
 
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>Vue<span class="token punctuation">,</span>Watch<span class="token punctuation">,</span>Prop<span class="token punctuation">,</span>Component<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+&lt;script lang=&quot;ts&quot;&gt;
+import &#123;Vue,Watch,Prop,Component&#125; from &#39;vue-property-decorator&#39;
 
 @Component
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">ReviewPreviewv</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> defalut<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span> readonly searchToolsItems<span class="token operator">!</span><span class="token punctuation">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token comment" spellcheck="true">//  当不传数据时默认为空数组</span>
+export default class ReviewPreviewv extends Vue&#123;
+    @Prop(&#123; defalut: ()=&gt; []&#125;) readonly searchToolsItems!: any[]
+    //  当不传数据时默认为空数组
 
-    formInline<span class="token punctuation">:</span> object <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    formInline: object = &#123;&#125;
 
-    <span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>searchToolItems<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    create() &#123;
+        console.log(this.searchToolItems)
+    &#125;
 
-    @<span class="token function">Emit</span><span class="token punctuation">(</span><span class="token string">'getTableData'</span><span class="token punctuation">)</span>
-    <span class="token function">onSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formInline
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    @Emit(&#39;getTableData&#39;)
+    onSubmit() &#123;
+        return this.formInline
+    &#125;
+&#125;
+&lt;/script&gt;
 
-<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> src<span class="token operator">=</span><span class="token string">"./index.scss"</span><span class="token operator">></span></code></pre>
+&lt;style lang=&quot;scss&quot; src=&quot;./index.scss&quot;&gt;</code></pre>
 <p><strong>index.html</strong></p>
 <pre><code> &lt;div&gt;
      &lt;el-form :inline=&quot;true&quot; :model=&quot;formInline&quot; class=&quot;demo-form-inline&quot;&gt;
