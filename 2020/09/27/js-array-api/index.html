@@ -1,0 +1,2000 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="js_Array_API, vici.blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>js_Array_API | vici.blog</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">vici.blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">vici.blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">js_Array_API</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/js/">
+                                <span class="chip bg-color">js</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84API/">
+                                <span class="chip bg-color">数组API</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-09-27
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="JavaScript数组所有API全解密"><a href="#JavaScript数组所有API全解密" class="headerlink" title="JavaScript数组所有API全解密"></a>JavaScript数组所有API全解密</h1><p> <a target="_blank" rel="noopener" href="http://louiszhai.github.io/2017/04/28/array/#Array%E6%9E%84%E9%80%A0%E5%99%A8">http://louiszhai.github.io/2017/04/28/array/#Array%E6%9E%84%E9%80%A0%E5%99%A8</a> </p>
+<h3 id="Array构造器"><a href="#Array构造器" class="headerlink" title="Array构造器"></a>Array构造器</h3><p>Array构造器用于创建一个新的数组。通常，我们推荐使用对象字面量创建数组，这是一个好习惯，但是总有对象字面量乏力的时候，比如说，我想创建一个长度为8的空数组。请比较如下两种方式：</p>
+<pre><code>// 使用Array构造器
+var a = Array(8); // [undefined × 8]
+// 使用对象字面量
+var b = [];
+b.length = 8; // [undefined × 8]</code></pre>
+<p>Array构造器明显要简洁一些，当然你也许会说，对象字面量也不错啊，那么我保持沉默。</p>
+<p>如上，我使用了<code>Array(8)</code>而不是<code>new Array(8)</code>，这会有影响吗？实际上，并没有影响，这得益于Array构造器内部对this指针的判断，<a target="_blank" rel="noopener" href="http://ecma262-5.com/ELS5_HTML.htm#Section_15.4.1">ELS5_HTML规范</a>是这么说的：</p>
+<blockquote>
+<p>When <code>Array</code> is called as a function rather than as a constructor, it creates and initialises a new Array object. Thus the function call <code>Array(…)</code> is equivalent to the object creation expression <code>new Array(…)</code> with the same arguments.</p>
+</blockquote>
+<p>从规范来看，浏览器内部大致做了如下类似的实现：</p>
+<pre><code>function Array()&#123;
+  // 如果this不是Array的实例，那就重新new一个实例
+  if(!(this instanceof arguments.callee))&#123;
+    return new arguments.callee();
+  &#125;
+&#125;</code></pre>
+<p>上面，我似乎跳过了对Array构造器语法的介绍，没事，接下来我补上。</p>
+<p>Array构造器根据参数长度的不同，有如下两种不同的处理：</p>
+<ul>
+<li>new Array(arg1, arg2,…)，参数长度为0或长度大于等于2时，传入的参数将按照顺序依次成为新数组的第0至N项（参数长度为0时，返回空数组）。</li>
+<li>new Array(len)，当len不是数值时，处理同上，返回一个只包含len元素一项的数组；当len为数值时，根据如下<a target="_blank" rel="noopener" href="http://ecma262-5.com/ELS5_HTML.htm#Section_15.4.2.2">规范</a>，len最大不能超过32位无符号整型，即需要小于2的32次方（len最大为<code>Math.pow(2,32) -1</code>或<code>-1&gt;&gt;&gt;0</code>），否则将抛出RangeError。</li>
+</ul>
+<blockquote>
+<p>If the argument <em>len</em> is a Number and ToUint32(<em>len</em>) is equal to <em>len</em>, then the <code>length</code> property of the newly constructed object is set to ToUint32(<em>len</em>). If the argument len is a Number and ToUint32(<em>len</em>) is not equal to <em>len</em>, a <strong>RangeError</strong> exception is thrown.</p>
+</blockquote>
+<p>以上，请注意Array构造器对于单个数值参数的特殊处理，如果仅仅需要使用数组包裹📦 若干参数，不妨使用Array.of，具体请移步下一节。</p>
+<h3 id="ES6新增的构造函数方法"><a href="#ES6新增的构造函数方法" class="headerlink" title="ES6新增的构造函数方法"></a><strong>ES6新增的构造函数方法</strong></h3><p>鉴于数组的常用性，ES6专门扩展了数组构造器<code>Array</code> ，新增2个方法：<code>Array.of</code>、<code>Array.from</code>。下面展开来聊。</p>
+<h4 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of"></a><strong>Array.of</strong></h4><p>Array.of用于将参数依次转化为数组中的一项，然后返回这个新数组，而不管这个参数是数字还是其它。它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上。如下：</p>
+<pre><code>Array.of(8.0); // [8]
+Array(8.0); // [empty × 8]
+12</code></pre>
+<p>参数为多个，或单个参数不是数字时，Array.of 与 Array构造器等同。</p>
+<pre><code>Array.of(8.0, 5); // [8, 5]
+Array(8.0, 5); // [8, 5]
+
+Array.of(&#39;8&#39;); // [&quot;8&quot;]
+Array(&#39;8&#39;); // [&quot;8&quot;]
+12345</code></pre>
+<p>因此，若是需要使用数组包裹元素，推荐优先使用Array.of方法。</p>
+<p>目前，以下版本浏览器提供了对Array.of的支持。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Chrome</th>
+<th align="center">Firefox</th>
+<th align="center">Edge</th>
+<th align="center">Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">45+</td>
+<td align="center">25+</td>
+<td align="center">✔️</td>
+<td align="center">9.0+</td>
+</tr>
+</tbody></table>
+<p>即使其他版本浏览器不支持也不必担心，由于Array.of与Array构造器的这种高度相似性，实现一个polyfill十分简单。如下：</p>
+<pre><code>if (!Array.of)&#123;
+  Array.of = function()&#123;
+    return Array.prototype.slice.call(arguments);
+  &#125;;
+&#125;
+12345</code></pre>
+<h4 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from"></a><strong>Array.from</strong></h4><p>语法：<em>Array.from(arrayLike[, processingFn[, thisArg]])</em></p>
+<p>Array.from的设计初衷是快速便捷的基于其他对象创建新数组，准确来说就是从一个类似数组的可迭代对象创建一个新的数组实例，说人话就是，只要一个对象有迭代器，Array.from就能把它变成一个数组（当然，是返回新的数组，不改变原对象）。</p>
+<p>从语法上看，Array.from拥有3个形参，第一个为类似数组的对象，必选。第二个为加工函数，新生成的数组会经过该函数的加工再返回。第三个为this作用域，表示加工函数执行时this的值。后两个参数都是可选的。我们来看看用法。</p>
+<pre><code>var obj = &#123;0: &#39;a&#39;, 1: &#39;b&#39;, 2:&#39;c&#39;, length: 3&#125;;
+Array.from(obj, function(value, index)&#123;
+  console.log(value, index, this, arguments.length);
+  return value.repeat(3); //必须指定返回值，否则返回undefined
+&#125;, obj);
+12345</code></pre>
+<p>执行结果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://louiszhai.github.io/docImages/array01.png"><img src="http://louiszhai.github.io/docImages/array01.png" alt="Array.from执行结果"></a></p>
+<p>可以看到加工函数的this作用域被obj对象取代，也可以看到加工函数默认拥有两个形参，分别为迭代器当前元素的值和其索引。</p>
+<p>注意，一旦使用加工函数，必须明确指定返回值，否则将隐式返回undefined，最终生成的数组也会变成一个只包含若干个undefined元素的空数组。</p>
+<p>实际上，如果不需要指定this，加工函数完全可以是一个箭头函数。上述代码可以简化如下：</p>
+<pre><code>Array.from(obj, (value) =&gt; value.repeat(3));
+1</code></pre>
+<p>除了上述obj对象以外，拥有迭代器的对象还包括这些：<code>String</code>，<code>Set</code>，<code>Map</code>，<code>arguments</code> 等，Array.from统统可以处理。如下所示：</p>
+<pre><code>// String
+Array.from(&#39;abc&#39;); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+// Set
+Array.from(new Set([&#39;abc&#39;, &#39;def&#39;])); // [&quot;abc&quot;, &quot;def&quot;]
+// Map
+Array.from(new Map([[1, &#39;abc&#39;], [2, &#39;def&#39;]])); // [[1
+, &#39;abc&#39;], [2, &#39;def&#39;]]
+// 天生的类数组对象arguments
+function fn()&#123;
+  return Array.from(arguments);
+&#125;
+fn(1, 2, 3); // [1, 2, 3]
+123456789101112</code></pre>
+<p>到这你可能以为Array.from就讲完了，实际上还有一个重要的扩展场景必须提下。比如说生成一个从0到指定数字的新数组，Array.from就可以轻易的做到。</p>
+<pre><code>Array.from(&#123;length: 10&#125;, (v, i) =&gt; i); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+1</code></pre>
+<p>后面我们将会看到，利用数组的keys方法实现上述功能，可能还要简单一些。</p>
+<p>目前，以下版本浏览器提供了对Array.from的支持。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Chrome</th>
+<th align="center">Firefox</th>
+<th align="center">Edge</th>
+<th align="center">Opera</th>
+<th align="center">Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">45+</td>
+<td align="center">32+</td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">9.0+</td>
+</tr>
+</tbody></table>
+<h3 id="Array-isArray"><a href="#Array-isArray" class="headerlink" title="Array.isArray"></a><strong>Array.isArray</strong></h3><p>顾名思义，Array.isArray用来判断一个变量是否数组类型。JS的弱类型机制导致判断变量类型是初级前端开发者面试时的必考题，一般我都会将其作为考察候选人第一题，然后基于此展开。在ES5提供该方法之前，我们至少有如下5种方式去判断一个值是否数组：</p>
+<pre><code>var a = [];
+// 1.基于instanceof
+a instanceof Array;
+// 2.基于constructor
+a.constructor === Array;
+// 3.基于Object.prototype.isPrototypeOf
+Array.prototype.isPrototypeOf(a);
+// 4.基于getPrototypeOf
+Object.getPrototypeOf(a) === Array.prototype;
+// 5.基于Object.prototype.toString
+Object.prototype.toString.apply(a) === &#39;[object Array]&#39;;
+1234567891011</code></pre>
+<p>以上，除了<code>Object.prototype.toString</code>外，其它方法都不能正确判断变量的类型。</p>
+<p>要知道，代码的运行环境十分复杂，一个变量可能使用浑身解数去迷惑它的创造者。且看：</p>
+<pre><code>var a = &#123;
+  __proto__: Array.prototype
+&#125;;
+// 分别在控制台试运行以下代码
+// 1.基于instanceof
+a instanceof Array; // true
+// 2.基于constructor
+a.constructor === Array; // true
+// 3.基于Object.prototype.isPrototypeOf
+Array.prototype.isPrototypeOf(a); // true
+// 4.基于getPrototypeOf
+Object.getPrototypeOf(a) === Array.prototype; // true
+123456789101112</code></pre>
+<p>以上，4种方法将全部返回<code>true</code>，为什么呢？我们只是手动指定了某个对象的<code>__proto__</code>属性为<code>Array.prototype</code>，便导致了该对象继承了Array对象，这种毫不负责任的继承方式，使得基于继承的判断方案瞬间土崩瓦解。</p>
+<p>不仅如此，我们还知道，Array是堆数据，变量指向的只是它的引用地址，因此每个页面的Array对象引用的地址都是不一样的。iframe中声明的数组，它的构造函数是iframe中的Array对象。如果在iframe声明了一个数组<code>x</code>，将其赋值给父页面的变量<code>y</code>，那么在父页面使用<code>y instanceof Array</code> ，结果一定是<code>false</code>的。而最后一种返回的是字符串，不会存在引用问题。实际上，多页面或系统之间的交互只有字符串能够畅行无阻。</p>
+<p>鉴于上述的两点原因，故笔者推荐使用最后一种方法去撩面试官（别提是我说的），如果你还不信，这里恰好有篇文章跟我持有相同的观点：<a target="_blank" rel="noopener" href="http://web.mit.edu/jwalden/www/isArray.html">Determining with absolute accuracy whether or not a JavaScript object is an array</a>。</p>
+<p>相反，使用Array.isArray则非常简单，如下：</p>
+<pre><code>Array.isArray([]); // true
+Array.isArray(&#123;0: &#39;a&#39;, length: 1&#125;); // false
+12</code></pre>
+<p>目前，以下版本浏览器提供了对Array.isArray的支持。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Chrome</th>
+<th align="center">Firefox</th>
+<th align="center">IE</th>
+<th align="center">Opera</th>
+<th align="center">Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">5+</td>
+<td align="center">4+</td>
+<td align="center">9+</td>
+<td align="center">10.5+</td>
+<td align="center">5+</td>
+</tr>
+</tbody></table>
+<p>实际上，通过<code>Object.prototype.toString</code>去判断一个值的类型，也是各大主流库的标准。因此Array.isArray的polyfill通常长这样：</p>
+<pre><code>if (!Array.isArray)&#123;
+  Array.isArray = function(arg)&#123;
+    return Object.prototype.toString.call(arg) === &#39;[object Array]&#39;;
+  &#125;;
+&#125;
+12345</code></pre>
+<h3 id="数组推导"><a href="#数组推导" class="headerlink" title="数组推导"></a><strong>数组推导</strong></h3><p>ES6对数组的增强不止是体现在api上，还包括语法糖。比如说<code>for of</code>，它就是借鉴其它语言而成的语法糖，这种基于原数组使用<code>for of</code>生成新数组的语法糖，叫做<strong>数组推导</strong>。<strong>数组推导最初起早在ES6的草案中，但在第27版（2014年8月）中被移除，目前只有Firefox v30+支持，推导有风险，使用需谨慎。</strong>所幸如今这些语言都还支持推导：CoffeeScript、Python、Haskell、Clojure，我们可以从中一窥端倪。这里我们以python的<code>for in</code>推导打个比方：</p>
+<pre><code># python for in 推导
+a = [1, 2, 3, 4]
+print [i * i for i in a if i == 3] # [9]
+123</code></pre>
+<p>如下是SpiderMonkey引擎（Firefox）之前基于ES4规范实现的数组推导(与python的推导十分相似)：</p>
+<pre><code>[i * i for (i of a)] // [1, 4, 9, 16]
+1</code></pre>
+<p>ES6中数组有关的<code>for of</code>在ES4的基础上进一步演化，for关键字居首，in在中间，最后才是运算表达式。如下：</p>
+<pre><code>[for (i of [1, 2, 3, 4]) i * i] // [1, 4, 9, 16]
+1</code></pre>
+<p>同python的示例，ES6中数组有关的<code>for of</code>也可以使用if语句：</p>
+<pre><code>// 单个if
+[for (i of [1, 2, 3, 4]) if (i == 3) i * i] // [9]
+// 甚至是多个if
+[for (i of [1, 2, 3, 4]) if (i &gt; 2) if (i &lt; 4) i * i] // [9]
+1234</code></pre>
+<p>更为强大的是，ES6数组推导还允许多重<code>for of</code>。</p>
+<pre><code>[for (i of [1, 2, 3]) for (j of [10, 100]) i * j] // [10, 100, 20, 200, 30, 300]
+1</code></pre>
+<p>甚至，数组推导还能够嵌入另一个数组推导中。</p>
+<pre><code>[for (i of [1, 2, 3]) [for (j of [10, 100]) i * j] ] // [[10, 100], [20, 200], [30, 300]]
+1</code></pre>
+<p>对于上述两个表达式，前者和后者唯一的区别，就在于后者的第二个推导是先返回数组，然后与外部的推导再进行一次运算。</p>
+<p>除了多个数组推导嵌套外，ES6的数组推导还会为每次迭代分配一个新的作用域（目前Firefox也没有为每次迭代创建新的作用域）：</p>
+<pre><code>// ES6规范
+[for (x of [0, 1, 2]) () =&gt; x][0]() // 0
+// Firefox运行
+[for (x of [0, 1, 2]) () =&gt; x][0]() // 2
+1234</code></pre>
+<p>通过上面的实例，我们看到使用数组推导来创建新数组比<code>forEach</code>，<code>map</code>，<code>filter</code>等遍历方法更加简洁，只是非常可惜，它不是标准规范。</p>
+<p>ES6不仅新增了对Array构造器相关API，还新增了8个原型的方法。接下来我会在原型方法的介绍中穿插着ES6相关方法的讲解，请耐心往下读。</p>
+<h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a><strong>原型</strong></h3><p>继承的常识告诉我们，js中所有的数组方法均来自于Array.prototype，和其他构造函数一样，你可以通过扩展 <code>Array</code> 的 <code>prototype</code> 属性上的方法来给所有数组实例增加方法。</p>
+<p>值得一说的是，Array.prototype本身就是一个数组。</p>
+<pre><code>Array.isArray(Array.prototype); // true
+console.log(Array.prototype.length);// 0
+12</code></pre>
+<p>以下方法可以进一步验证：</p>
+<pre><code>console.log([].__proto__.length);// 0
+console.log([].__proto__);// [Symbol(Symbol.unscopables): Object]
+12</code></pre>
+<p>有关Symbol(Symbol.unscopables)的知识，这里不做详述，具体请移步后续章节。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a><strong>方法</strong></h3><p>数组原型提供的方法非常之多，主要分为三种，一种是会改变自身值的，一种是不会改变自身值的，另外一种是遍历方法。</p>
+<p>由于 Array.prototype 的某些属性被设置为[[DontEnum]]，因此不能用一般的方法进行遍历，我们可以通过如下方式获取 Array.prototype 的所有方法：</p>
+<pre><code>Object.getOwnPropertyNames(Array.prototype); // [&quot;length&quot;, &quot;constructor&quot;, &quot;toString&quot;, &quot;toLocaleString&quot;, &quot;join&quot;, &quot;pop&quot;, &quot;push&quot;, &quot;reverse&quot;, &quot;shift&quot;, &quot;unshift&quot;, &quot;slice&quot;, &quot;splice&quot;, &quot;sort&quot;, &quot;filter&quot;, &quot;forEach&quot;, &quot;some&quot;, &quot;every&quot;, &quot;map&quot;, &quot;indexOf&quot;, &quot;lastIndexOf&quot;, &quot;reduce&quot;, &quot;reduceRight&quot;, &quot;copyWithin&quot;, &quot;find&quot;, &quot;findIndex&quot;, &quot;fill&quot;, &quot;includes&quot;, &quot;entries&quot;, &quot;keys&quot;, &quot;concat&quot;]
+1</code></pre>
+<h4 id="改变自身值的方法-9个"><a href="#改变自身值的方法-9个" class="headerlink" title="改变自身值的方法(9个)"></a><strong>改变自身值的方法(9个)</strong></h4><p>基于ES6，改变自身值的方法一共有9个，分别为pop、push、reverse、shift、sort、splice、unshift，以及两个ES6新增的方法copyWithin 和 fill。</p>
+<p>对于能改变自身值的数组方法，日常开发中需要特别注意，尽量避免在循环遍历中去改变原数组的项。接下来，我们一起来深入地了解这些方法。</p>
+<h5 id="pop"><a href="#pop" class="headerlink" title="pop"></a><strong>pop</strong></h5><p>pop() 方法删除一个数组中的最后的一个元素，并且返回这个元素。如果是栈的话，这个过程就是栈顶弹出。</p>
+<pre><code>var array = [&quot;cat&quot;, &quot;dog&quot;, &quot;cow&quot;, &quot;chicken&quot;, &quot;mouse&quot;];
+var item = array.pop();
+console.log(array); // [&quot;cat&quot;, &quot;dog&quot;, &quot;cow&quot;, &quot;chicken&quot;]
+console.log(item); // mouse
+1234</code></pre>
+<p>由于设计上的巧妙，pop方法可以应用在类数组对象上，即 <code>鸭式辨型</code>. 如下：</p>
+<pre><code>var o = &#123;0:&quot;cat&quot;, 1:&quot;dog&quot;, 2:&quot;cow&quot;, 3:&quot;chicken&quot;, 4:&quot;mouse&quot;, length:5&#125;
+var item = Array.prototype.pop.call(o);
+console.log(o); // Object &#123;0: &quot;cat&quot;, 1: &quot;dog&quot;, 2: &quot;cow&quot;, 3: &quot;chicken&quot;, length: 4&#125;
+console.log(item); // mouse
+1234</code></pre>
+<p>但如果类数组对象不具有length属性，那么该对象将被创建length属性，length值为0。如下：</p>
+<pre><code>var o = &#123;0:&quot;cat&quot;, 1:&quot;dog&quot;, 2:&quot;cow&quot;, 3:&quot;chicken&quot;, 4:&quot;mouse&quot;&#125;
+var item = Array.prototype.pop.call(o);
+console.log(array); // Object &#123;0: &quot;cat&quot;, 1: &quot;dog&quot;, 2: &quot;cow&quot;, 3: &quot;chicken&quot;, 4: &quot;mouse&quot;, length: 0&#125;
+console.log(item); // undefined
+1234</code></pre>
+<h5 id="push"><a href="#push" class="headerlink" title="push"></a><strong>push</strong></h5><p>push()方法添加一个或者多个元素到数组末尾，并且返回数组新的长度。如果是栈的话，这个过程就是栈顶压入。</p>
+<p>语法：<em>arr.push(element1, …, elementN)</em></p>
+<pre><code>var array = [&quot;football&quot;, &quot;basketball&quot;, &quot;volleyball&quot;, &quot;Table tennis&quot;, &quot;badminton&quot;];
+var i = array.push(&quot;golfball&quot;);
+console.log(array); // [&quot;football&quot;, &quot;basketball&quot;, &quot;volleyball&quot;, &quot;Table tennis&quot;, &quot;badminton&quot;, &quot;golfball&quot;]
+console.log(i); // 6
+1234</code></pre>
+<p>同pop方法一样，push方法也可以应用到类数组对象上，如果length不能被转成一个数值或者不存在length属性时，则插入的元素索引为0，且length属性不存在时，将会创建它。</p>
+<pre><code>var o = &#123;0:&quot;football&quot;, 1:&quot;basketball&quot;&#125;;
+var i = Array.prototype.push.call(o, &quot;golfball&quot;);
+console.log(o); // Object &#123;0: &quot;golfball&quot;, 1: &quot;basketball&quot;, length: 1&#125;
+console.log(i); // 1
+1234</code></pre>
+<p>实际上，push方法是根据length属性来决定从哪里开始插入给定的值。</p>
+<pre><code>var o = &#123;0:&quot;football&quot;, 1:&quot;basketball&quot;,length:1&#125;;
+var i = Array.prototype.push.call(o,&quot;golfball&quot;);
+console.log(o); // Object &#123;0: &quot;football&quot;, 1: &quot;golfball&quot;, length: 2&#125;
+console.log(i); // 2
+1234</code></pre>
+<p>利用push根据length属性插入元素这个特点，可以实现数组的合并，如下：</p>
+<pre><code>var array = [&quot;football&quot;, &quot;basketball&quot;];
+var array2 = [&quot;volleyball&quot;, &quot;golfball&quot;];
+var i = Array.prototype.push.apply(array,array2);
+console.log(array); // [&quot;football&quot;, &quot;basketball&quot;, &quot;volleyball&quot;, &quot;golfball&quot;]
+console.log(i); // 4
+12345</code></pre>
+<h5 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a><strong>reverse</strong></h5><p>reverse()方法颠倒数组中元素的位置，第一个会成为最后一个，最后一个会成为第一个，该方法返回对数组的引用。</p>
+<p>语法：<em>arr.reverse()</em></p>
+<pre><code>var array = [1,2,3,4,5];
+var array2 = array.reverse();
+console.log(array); // [5,4,3,2,1]
+console.log(array2===array); // true
+1234</code></pre>
+<p>同上，reverse 也是鸭式辨型的受益者，颠倒元素的范围受length属性制约。如下:</p>
+<pre><code>var o = &#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;, length:2&#125;;
+var o2 = Array.prototype.reverse.call(o);
+console.log(o); // Object &#123;0: &quot;b&quot;, 1: &quot;a&quot;, 2: &quot;c&quot;, length: 2&#125;
+console.log(o === o2); // true
+1234</code></pre>
+<p>如果 length 属性小于2 或者 length 属性不为数值，那么原类数组对象将没有变化。即使 length 属性不存在，该对象也不会去创建 length 属性。特别的是，当 length 属性较大时，类数组对象的『索引』会尽可能的向 length 看齐。如下:</p>
+<pre><code>var o = &#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;,length:100&#125;;
+var o2 = Array.prototype.reverse.call(o);
+console.log(o); // Object &#123;97: &quot;c&quot;, 98: &quot;b&quot;, 99: &quot;a&quot;, length: 100&#125;
+console.log(o === o2); // true
+1234</code></pre>
+<h5 id="shift"><a href="#shift" class="headerlink" title="shift"></a><strong>shift</strong></h5><p>shift()方法删除数组的第一个元素，并返回这个元素。如果是栈的话，这个过程就是栈底弹出。</p>
+<p>语法：<em>arr.shift()</em></p>
+<pre><code>var array = [1,2,3,4,5];
+var item = array.shift();
+console.log(array); // [2,3,4,5]
+console.log(item); // 1
+1234</code></pre>
+<p>同样受益于鸭式辨型，对于类数组对象，shift仍然能够处理。如下：</p>
+<pre><code>var o = &#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;, length:3&#125;;
+var item = Array.prototype.shift.call(o);
+console.log(o); // Object &#123;0: &quot;b&quot;, 1: &quot;c&quot;, length: 2&#125;
+console.log(item); // a
+1234</code></pre>
+<p>如果类数组对象length属性不存在，将添加length属性，并初始化为0。如下：</p>
+<pre><code>var o = &#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;&#125;;
+var item = Array.prototype.shift.call(o);
+console.log(o); // Object &#123;0: &quot;a&quot;, 1: &quot;b&quot;, 2:&quot;c&quot; length: 0&#125;
+console.log(item); // undefined
+1234</code></pre>
+<h5 id="sort"><a href="#sort" class="headerlink" title="sort"></a><strong>sort</strong></h5><p>sort()方法对数组元素进行排序，并返回这个数组。sort方法比较复杂，这里我将多花些篇幅来讲这块。</p>
+<p>语法：<em>arr.sort([comparefn])</em></p>
+<p>comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode(万国码)位点顺序排序，例如”Boy”将排到”apple”之前。当对数字排序的时候，25将会排到8之前，因为转换为字符串后，”25”将比”8”靠前。例如：</p>
+<pre><code>var array = [&quot;apple&quot;,&quot;Boy&quot;,&quot;Cat&quot;,&quot;dog&quot;];
+var array2 = array.sort();
+console.log(array); // [&quot;Boy&quot;, &quot;Cat&quot;, &quot;apple&quot;, &quot;dog&quot;]
+console.log(array2 == array); // true
+
+array = [10, 1, 3, 20];
+var array3 = array.sort();
+console.log(array3); // [1, 10, 20, 3]
+12345678</code></pre>
+<p>如果指明了comparefn，数组将按照调用该函数的返回值来排序。若 a 和 b 是两个将要比较的元素：</p>
+<ul>
+<li>若 comparefn(a, b) &lt; 0，那么a 将排到 b 前面；</li>
+<li>若 comparefn(a, b) = 0，那么a 和 b 相对位置不变；</li>
+<li>若 comparefn(a, b) &gt; 0，那么a , b 将调换位置；</li>
+</ul>
+<p>如果数组元素为数字，则排序函数comparefn格式如下所示：</p>
+<pre><code>function compare(a, b)&#123;
+  return a-b;
+&#125;
+123</code></pre>
+<p>如果数组元素为非ASCII字符的字符串(如包含类似 e、é、è、a、ä 或中文字符等非英文字符的字符串)，则需要使用String.localeCompare。下面这个函数将排到正确的顺序。</p>
+<pre><code>var array = [&#39;互&#39;,&#39;联&#39;,&#39;网&#39;,&#39;改&#39;,&#39;变&#39;,&#39;世&#39;,&#39;界&#39;];
+var array2 = array.sort();
+
+var array = [&#39;互&#39;,&#39;联&#39;,&#39;网&#39;,&#39;改&#39;,&#39;变&#39;,&#39;世&#39;,&#39;界&#39;]; // 重新赋值,避免干扰array2
+var array3 = array.sort(function (a, b) &#123;
+  return a.localeCompare(b);
+&#125;);
+
+console.log(array2); // [&quot;世&quot;, &quot;互&quot;, &quot;变&quot;, &quot;改&quot;, &quot;界&quot;, &quot;网&quot;, &quot;联&quot;]
+console.log(array3); // [&quot;变&quot;, &quot;改&quot;, &quot;互&quot;, &quot;界&quot;, &quot;联&quot;, &quot;世&quot;, &quot;网&quot;]
+12345678910</code></pre>
+<p>如上，『互联网改变世界』这个数组，sort函数默认按照数组元素unicode字符串形式进行排序，然而实际上，我们期望的是按照拼音先后顺序进行排序，显然String.localeCompare 帮助我们达到了这个目的。</p>
+<p>为什么上面测试中需要重新给array赋值呢，这是因为sort每次排序时改变的是数组本身，并且返回数组引用。如果不这么做，经过连续两次排序后，array2 和 array3 将指向同一个数组，最终影响我们测试。array重新赋值后就断开了对原数组的引用。</p>
+<p>同上，sort一样受益于鸭式辨型，比如：</p>
+<pre><code>var o = &#123;0:&#39;互&#39;,1:&#39;联&#39;,2:&#39;网&#39;,3:&#39;改&#39;,4:&#39;变&#39;,5:&#39;世&#39;,6:&#39;界&#39;,length:7&#125;;
+Array.prototype.sort.call(o,function(a, b)&#123;
+  return a.localeCompare(b);
+&#125;);
+console.log(o); // Object &#123;0: &quot;变&quot;, 1: &quot;改&quot;, 2: &quot;互&quot;, 3: &quot;界&quot;, 4: &quot;联&quot;, 5: &quot;世&quot;, 6: &quot;网&quot;, length: 7&#125;, 可见同上述排序结果一致
+12345</code></pre>
+<p>注意：使用sort的鸭式辨型特性时，若类数组对象不具有length属性，它并不会进行排序，也不会为其添加length属性。</p>
+<pre><code>var o = &#123;0:&#39;互&#39;,1:&#39;联&#39;,2:&#39;网&#39;,3:&#39;改&#39;,4:&#39;变&#39;,5:&#39;世&#39;,6:&#39;界&#39;&#125;;
+Array.prototype.sort.call(o,function(a, b)&#123;
+  return a.localeCompare(b);
+&#125;);
+console.log(o); // Object &#123;0: &quot;互&quot;, 1: &quot;联&quot;, 2: &quot;网&quot;, 3: &quot;改&quot;, 4: &quot;变&quot;, 5: &quot;世&quot;, 6: &quot;界&quot;&#125;, 可见并未添加length属性
+12345</code></pre>
+<h6 id="使用映射改善排序"><a href="#使用映射改善排序" class="headerlink" title="使用映射改善排序"></a><strong>使用映射改善排序</strong></h6><p>comparefn 如果需要对数组元素多次转换以实现排序，那么使用map辅助排序将是个不错的选择。基本思想就是将数组中的每个元素实际比较的值取出来，排序后再将数组恢复。</p>
+<pre><code>// 需要被排序的数组
+var array = [&#39;dog&#39;, &#39;Cat&#39;, &#39;Boy&#39;, &#39;apple&#39;];
+// 对需要排序的数字和位置的临时存储
+var mapped = array.map(function(el, i) &#123;
+  return &#123; index: i, value: el.toLowerCase() &#125;;
+&#125;)
+// 按照多个值排序数组
+mapped.sort(function(a, b) &#123;
+  return +(a.value &gt; b.value) || +(a.value === b.value) - 1;
+&#125;);
+// 根据索引得到排序的结果
+var result = mapped.map(function(el)&#123;
+  return array[el.index];
+&#125;);
+console.log(result); // [&quot;apple&quot;, &quot;Boy&quot;, &quot;Cat&quot;, &quot;dog&quot;]
+123456789101112131415</code></pre>
+<h6 id="奇怪的chrome"><a href="#奇怪的chrome" class="headerlink" title="奇怪的chrome"></a><strong>奇怪的chrome</strong></h6><p>实际上，ECMAscript规范中并未规定具体的sort算法，这就势必导致各个浏览器不尽相同的sort算法，请看sort方法在Chrome浏览器下表现：</p>
+<pre><code>var array = [&#123; n: &quot;a&quot;, v: 1 &#125;, &#123; n: &quot;b&quot;, v: 1 &#125;, &#123; n: &quot;c&quot;, v: 1 &#125;, &#123; n: &quot;d&quot;, v: 1 &#125;, &#123; n: &quot;e&quot;, v: 1 &#125;, &#123; n: &quot;f&quot;, v: 1 &#125;, &#123; n: &quot;g&quot;, v: 1 &#125;, &#123; n: &quot;h&quot;, v: 1 &#125;, &#123; n: &quot;i&quot;, v: 1 &#125;, &#123; n: &quot;j&quot;, v: 1 &#125;, &#123; n: &quot;k&quot;, v: 1 &#125;, ];
+array.sort(function (a, b) &#123;
+    return a.v - b.v;
+&#125;);
+for (var i = 0,len = array.length; i &lt; len; i++) &#123;
+    console.log(array[i].n);
+&#125;
+// f a c d e b g h i j k
+12345678</code></pre>
+<p>由于v值相等，array数组排序前后应该不变，然而Chrome却表现异常，而其他浏览器(如IE 或 Firefox) 表现正常。</p>
+<p>这是因为v8引擎为了高效排序(采用了不稳定排序)。即数组长度超过10条时，会调用另一种排序方法(快速排序)；而10条及以下采用的是插入排序，此时结果将是稳定的，如下：</p>
+<pre><code>var array = [&#123; n: &quot;a&quot;, v: 1 &#125;, &#123; n: &quot;b&quot;, v: 1 &#125;, &#123; n: &quot;c&quot;, v: 1 &#125;, &#123; n: &quot;d&quot;, v: 1 &#125;, &#123; n: &quot;e&quot;, v: 1 &#125;, &#123; n: &quot;f&quot;, v: 1 &#125;, &#123; n: &quot;g&quot;, v: 1 &#125;, &#123; n: &quot;h&quot;, v: 1 &#125;, &#123; n: &quot;i&quot;, v: 1 &#125;, &#123; n: &quot;j&quot;, v: 1 &#125;,];
+array.sort(function (a, b) &#123;
+  return a.v - b.v;
+&#125;);
+for (var i = 0,len = array.length; i &lt; len; i++) &#123;
+  console.log(array[i].n);
+&#125;
+// a b c d e f g h i j
+12345678</code></pre>
+<p>从a 到 j 刚好10条数据。</p>
+<p>那么我们该如何规避Chrome浏览器的这种”bug”呢？其实很简单，只需略动手脚，改变排序方法的返回值即可，如下：</p>
+<pre><code>// 由于快速排序会打乱值相同的元素的默认排序，因此我们需要先标记元素的默认位置
+array.forEach(function(v, k)&#123;
+  v.__index = k;
+&#125;);
+array.sort(function (a, b) &#123;
+  // 由于__index标记了初始顺序，这样的返回才保证了值相同元素的顺序不变，进而使得排序稳定
+  return a.v - b.v || a.__index - b.__index;
+&#125;);
+12345678</code></pre>
+<p>使用数组的sort方法需要注意一点：各浏览器的针对sort方法内部算法实现不尽相同，排序函数尽量只返回-1、0、1三种不同的值，不要尝试返回true或false等其它数值，因为可能导致不可靠的排序结果。</p>
+<h6 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a><strong>问题分析</strong></h6><p>sort方法传入的排序函数如果返回布尔值会导致什么样的结果呢？</p>
+<p>以下是常见的浏览器以及脚本引擎：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Browser Name</th>
+<th align="left">ECMAScript Engine</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Internet Explorer 6 - 8</td>
+<td align="left">JScript</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 9 - 10</td>
+<td align="left">Chakra</td>
+</tr>
+<tr>
+<td align="left">Firefox</td>
+<td align="left">SpiderMonkey, IonMonkey, TraceMonkey</td>
+</tr>
+<tr>
+<td align="left">Chrome</td>
+<td align="left">V8</td>
+</tr>
+<tr>
+<td align="left">Safair</td>
+<td align="left">JavaScriptCore(SquirrelFish Extreme)</td>
+</tr>
+<tr>
+<td align="left">Opera</td>
+<td align="left">Carakan</td>
+</tr>
+</tbody></table>
+<p>分析以下代码，预期将数组元素进行升序排序：</p>
+<pre><code>var array = [7, 6, 5, 4, 3, 2, 1, 0, 8, 9];
+var comparefn = function (x, y) &#123;
+  return x &gt; y;
+&#125;;
+array.sort(comparefn);
+12345</code></pre>
+<p>代码中，comparefn 函数返回值为 bool 类型，并非为规范规定的 -1、0、1 值。那么执行此代码，各 JS 脚本引擎实现情况如何？</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">输出结果</th>
+<th align="left">是否符合预期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">JScript</td>
+<td align="left">[2, 3, 5, 1, 4, 6, 7, 0, 8, 9]</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">Carakan</td>
+<td align="left">[0, 1, 3, 8, 2, 4, 9, 5, 6, 7]</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">Chakra &amp; JavaScriptCore</td>
+<td align="left">[7, 6, 5, 4, 3, 2, 1, 0, 8, 9]</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">SpiderMonkey</td>
+<td align="left">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">V8</td>
+<td align="left">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</td>
+<td align="left">是</td>
+</tr>
+</tbody></table>
+<p><strong>根据表中数据可见，当数组内元素个数小于等于 10 时，现象如下：</strong></p>
+<ul>
+<li>JScript &amp; Carakan 排序结果有误</li>
+<li>Chakra &amp; JavaScriptCore 看起来没有进行排序</li>
+<li>SpiderMonkey 返回了预期的正确结果</li>
+<li>V8 暂时看起来排序正确</li>
+</ul>
+<p><strong>将数组元素扩大至 11 位，现象如下：</strong></p>
+<pre><code>var array = [7, 6, 5, 4, 3, 2, 1, 0, 10, 9, 8];
+var comparefn = function (x, y) &#123;
+  return x &gt; y;
+&#125;;
+array.sort(comparefn);
+12345</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">JavaScript引擎</th>
+<th align="left">输出结果</th>
+<th align="left">是否符合预期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">JScript</td>
+<td align="left">[2, 3, 5, 1, 4, 6, 7, 0, 8, 9, 10]</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">Carakan</td>
+<td align="left">[0, 1, 3, 8, 2, 4, 9, 5, 10, 6, 7]</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">Chakra &amp; JavaScriptCore</td>
+<td align="left">[7, 6, 5, 4, 3, 2, 1, 0, 10, 8, 9]</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">IonMonkey</td>
+<td align="left">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">V8</td>
+<td align="left">[5, 0, 1, 2, 3, 4, 6, 7, 8, 9, 10]</td>
+<td align="left">否</td>
+</tr>
+</tbody></table>
+<p><strong>根据表中数据可见，当数组内元素个数大于 10 时：</strong></p>
+<ul>
+<li>JScript &amp; Carakan 排序结果有误</li>
+<li>Chakra &amp; JavaScriptCore 看起来没有进行排序</li>
+<li>SpiderMonkey 返回了预期的正确结果</li>
+<li>V8 <strong>排序结果由正确转为不正确</strong></li>
+</ul>
+<h5 id="splice"><a href="#splice" class="headerlink" title="splice"></a><strong>splice</strong></h5><p>splice()方法用新元素替换旧元素的方式来修改数组。它是一个常用的方法，复杂的数组操作场景通常都会有它的身影，特别是需要维持原数组引用时，就地删除或者新增元素，splice是最适合的。</p>
+<p>语法：<em>arr.splice(start,deleteCount[, item1[, item2[, …]]])</em></p>
+<p>start 指定从哪一位开始修改内容。如果超过了数组长度，则从数组末尾开始添加内容；如果是负值，则其指定的索引位置等同于 length+start (length为数组的长度)，表示从数组末尾开始的第 -start 位。</p>
+<p>deleteCount 指定要删除的元素个数，若等于0，则不删除。这种情况下，至少应该添加一位新元素，若大于start之后的元素总和，则start及之后的元素都将被删除。</p>
+<p>itemN 指定新增的元素，如果缺省，则该方法只删除数组元素。</p>
+<p>返回值 由原数组中被删除元素组成的数组，如果没有删除，则返回一个空数组。</p>
+<p>下面来举栗子说明：</p>
+<pre><code>var array = [&quot;apple&quot;,&quot;boy&quot;];
+var splices = array.splice(1,1);
+console.log(array); // [&quot;apple&quot;]
+console.log(splices); // [&quot;boy&quot;] ,可见是从数组下标为1的元素开始删除,并且删除一个元素,由于itemN缺省,故此时该方法只删除元素
+
+array = [&quot;apple&quot;,&quot;boy&quot;];
+splices = array.splice(2,1,&quot;cat&quot;);
+console.log(array); // [&quot;apple&quot;, &quot;boy&quot;, &quot;cat&quot;]
+console.log(splices); // [], 可见由于start超过数组长度,此时从数组末尾开始添加元素,并且原数组不会发生删除行为
+
+array = [&quot;apple&quot;,&quot;boy&quot;];
+splices = array.splice(-2,1,&quot;cat&quot;);
+console.log(array); // [&quot;cat&quot;, &quot;boy&quot;]
+console.log(splices); // [&quot;apple&quot;], 可见当start为负值时,是从数组末尾开始的第-start位开始删除,删除一个元素,并且从此处插入了一个元素
+
+array = [&quot;apple&quot;,&quot;boy&quot;];
+splices = array.splice(-3,1,&quot;cat&quot;);
+console.log(array); // [&quot;cat&quot;, &quot;boy&quot;]
+console.log(splices); // [&quot;apple&quot;], 可见即使-start超出数组长度,数组默认从首位开始删除
+
+array = [&quot;apple&quot;,&quot;boy&quot;];
+splices = array.splice(0,3,&quot;cat&quot;);
+console.log(array); // [&quot;cat&quot;]
+console.log(splices); // [&quot;apple&quot;, &quot;boy&quot;], 可见当deleteCount大于数组start之后的元素总和时,start及之后的元素都将被删除
+123456789101112131415161718192021222324</code></pre>
+<p>同上, splice一样受益于鸭式辨型, 比如:</p>
+<pre><code>var o = &#123;0:&quot;apple&quot;,1:&quot;boy&quot;,length:2&#125;;
+var splices = Array.prototype.splice.call(o,1,1);
+console.log(o); // Object &#123;0: &quot;apple&quot;, length: 1&#125;, 可见对象o删除了一个属性,并且length-1
+console.log(splices); // [&quot;boy&quot;]
+1234</code></pre>
+<p>注意：如果类数组对象没有length属性，splice将为该类数组对象添加length属性，并初始化为0。（此处忽略举例，如果需要请在评论里反馈）</p>
+<p>如果需要删除数组中一个已存在的元素，可参考如下：</p>
+<pre><code>var array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;];
+array.splice(array.indexOf(&#39;b&#39;),1);
+12</code></pre>
+<h5 id="unshift"><a href="#unshift" class="headerlink" title="unshift"></a><strong>unshift</strong></h5><p>unshift() 方法用于在数组开始处插入一些元素(就像是栈底插入)，并返回数组新的长度。</p>
+<p>语法：<em>arr.unshift(element1, …, elementN)</em></p>
+<pre><code>var array = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];
+var length = array.unshift(&quot;yellow&quot;);
+console.log(array); // [&quot;yellow&quot;, &quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]
+console.log(length); // 4
+1234</code></pre>
+<p>如果给unshift方法传入一个数组呢？</p>
+<pre><code>var array = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];
+var length = array.unshift([&quot;yellow&quot;]);
+console.log(array); // [[&quot;yellow&quot;], &quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]
+console.log(length); // 4, 可见数组也能成功插入
+1234</code></pre>
+<p>同上，unshift也受益于鸭式辨型，呈上栗子：</p>
+<pre><code>var o = &#123;0:&quot;red&quot;, 1:&quot;green&quot;, 2:&quot;blue&quot;,length:3&#125;;
+var length = Array.prototype.unshift.call(o,&quot;gray&quot;);
+console.log(o); // Object &#123;0: &quot;gray&quot;, 1: &quot;red&quot;, 2: &quot;green&quot;, 3: &quot;blue&quot;, length: 4&#125;
+console.log(length); // 4
+1234</code></pre>
+<p>注意：如果类数组对象不指定length属性，则返回结果是这样的 <code>Object &#123;0: &quot;gray&quot;, 1: &quot;green&quot;, 2: &quot;blue&quot;, length: 1&#125;</code>，shift会认为数组长度为0，此时将从对象下标为0的位置开始插入，相应位置属性将被替换，此时初始化类数组对象的length属性为插入元素个数。</p>
+<h5 id="copyWithin-ES6"><a href="#copyWithin-ES6" class="headerlink" title="copyWithin(ES6)"></a><strong>copyWithin(ES6)</strong></h5><p>copyWithin() 方法基于<strong>ECMAScript 2015（ES6）规范</strong>，用于数组内元素之间的替换，即替换元素和被替换元素均是数组内的元素。</p>
+<p>语法：<em>arr.copyWithin(target, start[, end = this.length])</em></p>
+<p>taget 指定被替换元素的索引，start 指定替换元素起始的索引，end 可选，指的是替换元素结束位置的索引。</p>
+<p>如果start为负，则其指定的索引位置等同于length+start，length为数组的长度。end也是如此。</p>
+<p>注：目前只有Firefox（版本32及其以上版本）实现了该方法。</p>
+<pre><code>var array = [1,2,3,4,5]; 
+var array2 = array.copyWithin(0,3);
+console.log(array===array2,array2); // true [4, 5, 3, 4, 5]
+
+var array = [1,2,3,4,5]; 
+console.log(array.copyWithin(0,3,4)); // [4, 2, 3, 4, 5]
+
+var array = [1,2,3,4,5]; 
+console.log(array.copyWithin(0,-2,-1)); // [4, 2, 3, 4, 5]
+123456789</code></pre>
+<p>同上，copyWithin一样受益于鸭式辨型，例如：</p>
+<pre><code>var o = &#123;0:1, 1:2, 2:3, 3:4, 4:5,length:5&#125;
+var o2 = Array.prototype.copyWithin.call(o,0,3);
+console.log(o===o2,o2); // true Object &#123; 0=4,  1=5,  2=3,  更多...&#125;
+123</code></pre>
+<p>如需在Firefox之外的浏览器使用copyWithin方法，请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin#Polyfill">Polyfill</a>。</p>
+<h5 id="fill-ES6"><a href="#fill-ES6" class="headerlink" title="fill(ES6)"></a><strong>fill(ES6)</strong></h5><p>fill() 方法基于<strong>ECMAScript 2015（ES6）规范</strong>，它同样用于数组元素替换，但与copyWithin略有不同，它主要用于将数组指定区间内的元素替换为某个值。</p>
+<p>语法：<em>arr.fill(value, start[, end = this.length])</em></p>
+<p>value 指定被替换的值，start 指定替换元素起始的索引，end 可选，指的是替换元素结束位置的索引。</p>
+<p>如果start为负，则其指定的索引位置等同于length+start，length为数组的长度。end也是如此。</p>
+<p>注：目前只有Firefox（版本31及其以上版本）实现了该方法。</p>
+<pre><code>var array = [1,2,3,4,5];
+var array2 = array.fill(10,0,3);
+console.log(array===array2,array2); // true [10, 10, 10, 4, 5], 可见数组区间[0,3]的元素全部替换为10
+// 其他的举例请参考copyWithin
+1234</code></pre>
+<p>同上，fill 一样受益于鸭式辨型，例如：</p>
+<pre><code>var o = &#123;0:1, 1:2, 2:3, 3:4, 4:5,length:5&#125;
+var o2 = Array.prototype.fill.call(o,10,0,2);
+console.log(o===o2,o2); true Object &#123; 0=10,  1=10,  2=3,  更多...&#125;
+123</code></pre>
+<p>如需在Firefox之外的浏览器使用fill方法,请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill#Compatibility">Polyfill</a>。</p>
+<h4 id="不会改变自身的方法-9个"><a href="#不会改变自身的方法-9个" class="headerlink" title="不会改变自身的方法(9个)"></a><strong>不会改变自身的方法(9个)</strong></h4><p>基于ES7，不会改变自身的方法一共有9个，分别为concat、join、slice、toString、toLocateString、indexOf、lastIndexOf、未标准的toSource以及ES7新增的方法includes。</p>
+<h5 id="concat"><a href="#concat" class="headerlink" title="concat"></a><strong>concat</strong></h5><p>concat() 方法将传入的数组或者元素与原数组合并，组成一个新的数组并返回。</p>
+<p>语法：<em>arr.concat(value1, value2, …, valueN)</em></p>
+<pre><code>var array = [1, 2, 3];
+var array2 = array.concat(4,[5,6],[7,8,9]);
+console.log(array2); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(array); // [1, 2, 3], 可见原数组并未被修改
+1234</code></pre>
+<p>若concat方法中不传入参数，那么将基于原数组<strong>浅复制</strong>生成一个一模一样的新数组（指向新的地址空间）。</p>
+<pre><code>var array = [&#123;a: 1&#125;];
+var array3 = array.concat();
+console.log(array3); // [&#123;a: 1&#125;]
+console.log(array3 === array); // false
+console.log(array[0] === array3[0]); // true，新旧数组第一个元素依旧共用一个同一个对象的引用
+12345</code></pre>
+<p>同上，concat 一样受益于鸭式辨型，但其效果可能达不到我们的期望，如下：</p>
+<pre><code>var o = &#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;,length:3&#125;;
+var o2 = Array.prototype.concat.call(o,&#39;d&#39;,&#123;3:&#39;e&#39;,4:&#39;f&#39;,length:2&#125;,[&#39;g&#39;,&#39;h&#39;,&#39;i&#39;]);
+console.log(o2); // [&#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;, length:3&#125;, &#39;d&#39;, &#123;3:&#39;e&#39;, 4:&#39;f&#39;, length:2&#125;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;]
+123</code></pre>
+<p>可见，类数组对象合并后返回的是依然是数组，并不是我们期望的对象。</p>
+<h5 id="join"><a href="#join" class="headerlink" title="join"></a><strong>join</strong></h5><p>join() 方法将数组中的所有元素连接成一个字符串。</p>
+<p>语法：<em>arr.join([separator = ‘,’])</em> separator可选，缺省默认为逗号。</p>
+<pre><code>var array = [&#39;We&#39;, &#39;are&#39;, &#39;Chinese&#39;];
+console.log(array.join()); // &quot;We,are,Chinese&quot;
+console.log(array.join(&#39;+&#39;)); // &quot;We+are+Chinese&quot;
+console.log(array.join(&#39;&#39;)); // &quot;WeareChinese&quot;
+1234</code></pre>
+<p>同上，join 一样受益于鸭式辨型，如下：</p>
+<pre><code>var o = &#123;0:&quot;We&quot;, 1:&quot;are&quot;, 2:&quot;Chinese&quot;, length:3&#125;;
+console.log(Array.prototype.join.call(o,&#39;+&#39;)); // &quot;We+are+Chinese&quot;
+console.log(Array.prototype.join.call(&#39;abc&#39;)); // &quot;a,b,c&quot;
+123</code></pre>
+<h5 id="slice"><a href="#slice" class="headerlink" title="slice"></a><strong>slice</strong></h5><p>slice() 方法将数组中一部分元素浅复制存入新的数组对象，并且返回这个数组对象。</p>
+<p>语法：<em>arr.slice([start[, end]])</em></p>
+<p>参数 start 指定复制开始位置的索引，end如果有值则表示复制结束位置的索引（不包括此位置）。</p>
+<p>如果 start 的值为负数，假如数组长度为 length，则表示从 length+start 的位置开始复制，此时参数 end 如果有值，只能是比 start 大的负数，否则将返回空数组。</p>
+<p>slice方法参数为空时，同concat方法一样，都是浅复制生成一个新数组。</p>
+<pre><code>var array = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;,&quot;four&quot;, &quot;five&quot;];
+console.log(array.slice()); // [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;,&quot;four&quot;, &quot;five&quot;]
+console.log(array.slice(2,3)); // [&quot;three&quot;]
+123</code></pre>
+<p><strong>浅复制</strong> 是指当对象的被复制时，只是复制了对象的引用，指向的依然是同一个对象。下面来说明slice为什么是浅复制。</p>
+<pre><code>var array = [&#123;color:&quot;yellow&quot;&#125;, 2, 3];
+var array2 = array.slice(0,1);
+console.log(array2); // [&#123;color:&quot;yellow&quot;&#125;]
+array[0][&quot;color&quot;] = &quot;blue&quot;;
+console.log(array2); // [&#123;color:&quot;bule&quot;&#125;]
+12345</code></pre>
+<p>由于slice是浅复制，复制到的对象只是一个引用，改变原数组array的值，array2也随之改变。</p>
+<p>同时，稍微利用下 slice 方法第一个参数为负数时的特性，我们可以非常方便的拿到数组的最后一项元素，如下：</p>
+<pre><code>console.log([1,2,3].slice(-1));//[3]
+1</code></pre>
+<p>同上，slice 一样受益于鸭式辨型。如下：</p>
+<pre><code>var o = &#123;0:&#123;&quot;color&quot;:&quot;yellow&quot;&#125;, 1:2, 2:3, length:3&#125;;
+var o2 = Array.prototype.slice.call(o,0,1);
+console.log(o2); // [&#123;color:&quot;yellow&quot;&#125;] ,毫无违和感...
+123</code></pre>
+<p>鉴于IE9以下版本对于该方法支持性并不是很好，如需更好的支持低版本IE浏览器，请参考<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">polyfill</a>。</p>
+<h5 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a><strong>toString</strong></h5><p>toString() 方法返回数组的字符串形式，该字符串由数组中的每个元素的 <code>toString()</code> 返回值经调用 <code>join()</code> 方法连接（由逗号隔开）组成。</p>
+<p>语法： <em>arr.toString()</em></p>
+<pre><code>var array = [&#39;Jan&#39;, &#39;Feb&#39;, &#39;Mar&#39;, &#39;Apr&#39;];
+var str = array.toString();
+console.log(str); // Jan,Feb,Mar,Apr
+123</code></pre>
+<p>当数组直接和字符串作连接操作时，将会自动调用其toString() 方法。</p>
+<pre><code>var str = [&#39;Jan&#39;, &#39;Feb&#39;, &#39;Mar&#39;, &#39;Apr&#39;] + &#39;,May&#39;;
+console.log(str); // &quot;Jan,Feb,Mar,Apr,May&quot;
+// 下面我们来试试鸭式辨型
+var o = &#123;0:&#39;Jan&#39;, 1:&#39;Feb&#39;, 2:&#39;Mar&#39;, length:3&#125;;
+var o2 = Array.prototype.toString.call(o);
+console.log(o2); // [object Object]
+console.log(o.toString()==o2); // true
+1234567</code></pre>
+<p>可见，<code>Array.prototype.toString()</code>方法处理类数组对象时，跟类数组对象直接调用<code>Object.prototype.toString()</code>方法结果完全一致，说好的鸭式辨型呢？</p>
+<p>根据ES5语义，toString() 方法是通用的，可被用于任何对象。如果对象有一个join() 方法，将会被调用，其返回值将被返回，没有则调用<code>Object.prototype.toString()</code>，为此，我们给o对象添加一个join方法。如下：</p>
+<pre><code>var o = &#123;
+  0:&#39;Jan&#39;, 
+  1:&#39;Feb&#39;, 
+  2:&#39;Mar&#39;, 
+  length:3, 
+  join:function()&#123;
+    return Array.prototype.join.call(this);
+  &#125;
+&#125;;
+console.log(Array.prototype.toString.call(o)); // &quot;Jan,Feb,Mar&quot;
+12345678910</code></pre>
+<h5 id="toLocaleString-NaN"><a href="#toLocaleString-NaN" class="headerlink" title="toLocaleString"></a><strong>toLocaleString</strong></h5><p>toLocaleString() 类似toString()的变型，该字符串由数组中的每个元素的 <code>toLocaleString()</code> 返回值经调用 <code>join()</code> 方法连接（由逗号隔开）组成。</p>
+<p>语法：<em>arr.toLocaleString()</em></p>
+<p>数组中的元素将调用各自的 toLocaleString 方法：</p>
+<ul>
+<li><code>Object</code>：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString"><code>Object.prototype.toLocaleString()</code></a></li>
+<li><code>Number</code>：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString"><code>Number.prototype.toLocaleString()</code></a></li>
+<li><code>Date</code>：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString"><code>Date.prototype.toLocaleString()</code></a></li>
+</ul>
+<pre><code>var array= [&#123;name:&#39;zz&#39;&#125;, 123, &quot;abc&quot;, new Date()];
+var str = array.toLocaleString();
+console.log(str); // [object Object],123,abc,2016/1/5 下午1:06:23
+123</code></pre>
+<p>其鸭式辨型的写法也同toString 保持一致，如下：</p>
+<pre><code>var o = &#123;
+  0:123, 
+  1:&#39;abc&#39;, 
+  2:new Date(), 
+  length:3, 
+  join:function()&#123;
+    return Array.prototype.join.call(this);
+  &#125;
+&#125;;
+console.log(Array.prototype.toLocaleString.call(o)); // 123,abc,2016/1/5 下午1:16:50
+12345678910</code></pre>
+<h5 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a><strong>indexOf</strong></h5><p>indexOf() 方法用于查找元素在数组中第一次出现时的索引，如果没有，则返回-1。</p>
+<p>语法：<em>arr.indexOf(element, fromIndex=0)</em></p>
+<p>element 为需要查找的元素。</p>
+<p>fromIndex 为开始查找的位置，缺省默认为0。如果超出数组长度，则返回-1。如果为负值，假设数组长度为length，则从数组的第 length + fromIndex项开始往数组末尾查找，如果length + fromIndex&lt;0 则整个数组都会被查找。</p>
+<p>indexOf使用严格相等（即使用 === 去匹配数组中的元素）。</p>
+<pre><code>var array = [&#39;abc&#39;, &#39;def&#39;, &#39;ghi&#39;,&#39;123&#39;];
+console.log(array.indexOf(&#39;def&#39;)); // 1
+console.log(array.indexOf(&#39;def&#39;,-1)); // -1 此时表示从最后一个元素往后查找,因此查找失败返回-1
+console.log(array.indexOf(&#39;def&#39;,-4)); // 1 由于4大于数组长度,此时将查找整个数组,因此返回1
+console.log(array.indexOf(123)); // -1, 由于是严格匹配,因此并不会匹配到字符串&#39;123&#39;
+12345</code></pre>
+<p>得益于鸭式辨型，indexOf 可以处理类数组对象。如下：</p>
+<pre><code>var o = &#123;0:&#39;abc&#39;, 1:&#39;def&#39;, 2:&#39;ghi&#39;, length:3&#125;;
+console.log(Array.prototype.indexOf.call(o,&#39;ghi&#39;,-4));//2
+12</code></pre>
+<p>然而该方法并不支持IE9以下版本，如需更好的支持低版本IE浏览器（IE6~8）， 请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf#Polyfill">Polyfill</a>。</p>
+<h5 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf"></a><strong>lastIndexOf</strong></h5><p>lastIndexOf() 方法用于查找元素在数组中最后一次出现时的索引，如果没有，则返回-1。并且它是indexOf的逆向查找，即从数组最后一个往前查找。</p>
+<p>语法：<em>arr.lastIndexOf(element, fromIndex=length-1)</em></p>
+<p>element 为需要查找的元素。</p>
+<p>fromIndex 为开始查找的位置，缺省默认为数组长度length-1。如果超出数组长度，由于是逆向查找，则查找整个数组。如果为负值，则从数组的第 length + fromIndex项开始往数组开头查找，如果length + fromIndex&lt;0 则数组不会被查找。</p>
+<p>同 indexOf 一样，lastIndexOf 也是严格匹配数组元素。</p>
+<p>举例请参考 <code>indexOf</code> ，不再详述，兼容低版本IE浏览器（IE6~8），请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf#Compatibility">Polyfill</a>。</p>
+<h5 id="includes-ES7"><a href="#includes-ES7" class="headerlink" title="includes(ES7)"></a><strong>includes(ES7)</strong></h5><p>includes() 方法基于<strong>ECMAScript 2016（ES7）规范</strong>，它用来判断当前数组是否包含某个指定的值，如果是，则返回 true，否则返回 false。</p>
+<p>语法：<em>arr.includes(element, fromIndex=0)</em></p>
+<p>element 为需要查找的元素。</p>
+<p>fromIndex 表示从该索引位置开始查找 element，缺省为0，它是正向查找，即从索引处往数组末尾查找。</p>
+<pre><code>var array = [-0, 1, 2];
+console.log(array.includes(+0)); // true
+console.log(array.includes(1)); // true
+console.log(array.includes(2,-4)); // true
+1234</code></pre>
+<p>以上，includes似乎忽略了 <code>-0</code> 与 <code>+0</code> 的区别，这不是问题，因为JavaScript一直以来都是不区分 <code>-0</code> 和 <code>+0</code> 的。</p>
+<p>你可能会问，既然有了indexOf方法，为什么又造一个includes方法，<code>arr.indexOf(x)&gt;-1</code>不就等于<code>arr.includes(x)</code>？看起来是的，几乎所有的时候它们都等同，唯一的区别就是includes能够发现NaN，而indexOf不能。</p>
+<pre><code>var array = [NaN];
+console.log(array.includes(NaN)); // true
+console.log(arra.indexOf(NaN)&gt;-1); // false
+123</code></pre>
+<p>该方法同样受益于鸭式辨型。如下：</p>
+<pre><code>var o = &#123;0:&#39;a&#39;, 1:&#39;b&#39;, 2:&#39;c&#39;, length:3&#125;;
+var bool = Array.prototype.includes.call(o, &#39;a&#39;);
+console.log(bool); // true
+123</code></pre>
+<p>该方法只有在Chrome 47、opera 34、Safari 9版本及其更高版本中才被实现。如需支持其他浏览器，请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes#Polyfill">Polyfill</a>。</p>
+<h5 id="toSource-非标准"><a href="#toSource-非标准" class="headerlink" title="toSource(非标准)"></a><strong>toSource(非标准)</strong></h5><p>toSource() 方法是<strong>非标准的</strong>，该方法返回数组的源代码，目前只有 Firefox 实现了它。</p>
+<p>语法：<em>arr.toSource()</em></p>
+<pre><code>var array = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;];
+console.log(array.toSource()); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+// 测试鸭式辨型
+var o = &#123;0:&#39;a&#39;, 1:&#39;b&#39;, 2:&#39;c&#39;, length:3&#125;;
+console.log(Array.prototype.toSource.call(o)); // [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]
+12345</code></pre>
+<h4 id="遍历方法-12个"><a href="#遍历方法-12个" class="headerlink" title="遍历方法(12个)"></a><strong>遍历方法(12个)</strong></h4><p>基于ES6，不会改变自身的方法一共有12个，分别为forEach、every、some、filter、map、reduce、reduceRight 以及ES6新增的方法entries、find、findIndex、keys、values。</p>
+<h5 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a><strong>forEach</strong></h5><p>forEach() 方法指定数组的每项元素都执行一次传入的函数，返回值为undefined。</p>
+<p>语法：<em>arr.forEach(fn, thisArg)</em></p>
+<p>fn 表示在数组每一项上执行的函数，接受三个参数：</p>
+<ul>
+<li>value 当前正在被处理的元素的值</li>
+<li>index 当前元素的数组索引</li>
+<li>array 数组本身</li>
+</ul>
+<p>thisArg 可选，用来当做fn函数内的this对象。</p>
+<p>forEach 将为数组中每一项执行一次 fn 函数，那些已删除，新增或者从未赋值的项将被跳过（但不包括值为 undefined 的项）。</p>
+<p>遍历过程中，fn会被传入上述三个参数。</p>
+<pre><code>var array = [1, 3, 5];
+var obj = &#123;name:&#39;cc&#39;&#125;;
+var sReturn = array.forEach(function(value, index, array)&#123;
+  array[index] = value * value;
+  console.log(this.name); // cc被打印了三次
+&#125;,obj);
+console.log(array); // [1, 9, 25], 可见原数组改变了
+console.log(sReturn); // undefined, 可见返回值为undefined
+12345678</code></pre>
+<p>得益于鸭式辨型，虽然forEach不能直接遍历对象，但它可以通过call方式遍历类数组对象。如下：</p>
+<pre><code>var o = &#123;0:1, 1:3, 2:5, length:3&#125;;
+Array.prototype.forEach.call(o,function(value, index, obj)&#123;
+  console.log(value,index,obj);
+  obj[index] = value * value;
+&#125;,o);
+// 1 0 Object &#123;0: 1, 1: 3, 2: 5, length: 3&#125;
+// 3 1 Object &#123;0: 1, 1: 3, 2: 5, length: 3&#125;
+// 5 2 Object &#123;0: 1, 1: 9, 2: 5, length: 3&#125;
+console.log(o); // Object &#123;0: 1, 1: 9, 2: 25, length: 3&#125;
+123456789</code></pre>
+<p>参考前面的文章 <a target="_blank" rel="noopener" href="http://louiszhai.github.io/2015/12/18/traverse/#forEach"><code>详解JS遍历</code></a> 中 forEach的讲解，我们知道，forEach无法直接退出循环，只能使用return 来达到for循环中continue的效果，并且forEach不能在低版本IE（6~8）中使用，兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#%E5%85%BC%E5%AE%B9%E6%97%A7%E7%8E%AF%E5%A2%83%EF%BC%88Polyfill%EF%BC%89">Polyfill</a>。</p>
+<h5 id="every"><a href="#every" class="headerlink" title="every"></a><strong>every</strong></h5><p>every() 方法使用传入的函数测试所有元素，只要其中有一个函数返回值为 false，那么该方法的结果为 false；如果全部返回 true，那么该方法的结果才为 true。因此 every 方法存在如下规律：</p>
+<ul>
+<li><p>若需检测数组中存在元素大于100 （即 one &gt; 100），那么我们需要在传入的函数中构造 “false” 返回值 （即返回 item &lt;= 100），同时整个方法结果为 false 才表示数组存在元素满足条件；（简单理解为：若是单项判断，可用 one false ===&gt; false）</p>
+</li>
+<li><p>若需检测数组中是否所有元素都大于100 （即all &gt; 100）那么我们需要在传入的函数中构造 “true” 返回值 （即返回 item &gt; 100），同时整个方法结果为 true 才表示数组所有元素均满足条件。(简单理解为：若是全部判断，可用 all true ===&gt; true）</p>
+</li>
+</ul>
+<p>语法同上述forEach，具体还可以参考 <a target="_blank" rel="noopener" href="http://louiszhai.github.io/2015/12/18/traverse/#every"><code>详解JS遍历</code></a> 中every的讲解。</p>
+<p>以下是鸭式辨型的写法：</p>
+<pre><code>var o = &#123;0:10, 1:8, 2:25, length:3&#125;;
+var bool = Array.prototype.every.call(o,function(value, index, obj)&#123;
+  return value &gt;= 8;
+&#125;,o);
+console.log(bool); // true
+12345</code></pre>
+<p>every 一样不能在低版本IE(6~8)中使用，兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every#Compatibility">Polyfill</a>。</p>
+<h5 id="some"><a href="#some" class="headerlink" title="some"></a><strong>some</strong></h5><p>some() 方法刚好同 every() 方法相反，some 测试数组元素时，只要有一个函数返回值为 true，则该方法返回 true，若全部返回 false，则该方法返回 false。some 方法存在如下规律：</p>
+<ul>
+<li><p>若需检测数组中存在元素大于100 (即 one &gt; 100)，那么我们需要在传入的函数中构造 “true” 返回值 (即返回 item &gt; 100)，同时整个方法结果为 true 才表示数组存在元素满足条件；（简单理解为：若是单项判断，可用 one true ===&gt; true）</p>
+</li>
+<li><p>若需检测数组中是否所有元素都大于100（即 all &gt; 100），那么我们需要在传入的函数中构造 “false” 返回值 （即返回 item &lt;= 100），同时整个方法结果为 false 才表示数组所有元素均满足条件。（简单理解为：若是全部判断，可用 all false ===&gt; false）</p>
+</li>
+</ul>
+<p>你注意到没有，some方法与includes方法有着异曲同工之妙，他们都是探测数组中是否拥有满足条件的元素，一旦找到，便返回true。多观察和总结这种微妙的关联关系，能够帮助我们深入理解它们的原理。</p>
+<p>some 的鸭式辨型写法可以参照every，同样它也不能在低版本IE（6~8）中使用，兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some#Compatibility">Polyfill</a>。</p>
+<h5 id="filter"><a href="#filter" class="headerlink" title="filter"></a><strong>filter</strong></h5><p>filter() 方法使用传入的函数测试所有元素，并返回所有通过测试的元素组成的新数组。它就好比一个过滤器，筛掉不符合条件的元素。</p>
+<p>语法：<em>arr.filter(fn, thisArg)</em></p>
+<pre><code>var array = [18, 9, 10, 35, 80];
+var array2 = array.filter(function(value, index, array)&#123;
+  return value &gt; 20;
+&#125;);
+console.log(array2); // [35, 80]
+12345</code></pre>
+<p>filter一样支持鸭式辨型，具体请参考every方法鸭式辨型写法。其在低版本IE（6~8）的兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#Compatibility">Polyfill</a>。</p>
+<h5 id="map"><a href="#map" class="headerlink" title="map"></a><strong>map</strong></h5><p>map() 方法遍历数组，使用传入函数处理每个元素，并返回函数的返回值组成的新数组。</p>
+<p>语法：<em>arr.map(fn, thisArg)</em></p>
+<p>参数介绍同 forEach 方法的参数介绍。</p>
+<p>具体用法请参考 <a target="_blank" rel="noopener" href="http://louiszhai.github.io/2015/12/18/traverse/#map"><code>详解JS遍历</code></a> 中 map 的讲解。</p>
+<p>map 一样支持鸭式辨型, 具体请参考every方法鸭式辨型写法。</p>
+<p>其在低版本IE（6~8）的兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Compatibility">Polyfill</a>。</p>
+<h5 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a><strong>reduce</strong></h5><p>reduce() 方法接收一个方法作为累加器，数组中的每个值(从左至右) 开始合并，最终为一个值。</p>
+<p>语法：<em>arr.reduce(fn, initialValue)</em></p>
+<p>fn 表示在数组每一项上执行的函数，接受四个参数：</p>
+<ul>
+<li>previousValue 上一次调用回调返回的值，或者是提供的初始值</li>
+<li>value 数组中当前被处理元素的值</li>
+<li>index 当前元素在数组中的索引</li>
+<li>array 数组自身</li>
+</ul>
+<p>initialValue 指定第一次调用 fn 的第一个参数。</p>
+<p>当 fn 第一次执行时：</p>
+<ul>
+<li>如果 initialValue 在调用 reduce 时被提供，那么第一个 previousValue 将等于 initialValue，此时 item 等于数组中的第一个值；</li>
+<li>如果 initialValue 未被提供，那么 previousVaule 等于数组中的第一个值，item 等于数组中的第二个值。此时如果数组为空，那么将抛出 TypeError。</li>
+<li>如果数组仅有一个元素，并且没有提供 initialValue，或提供了 initialValue 但数组为空，那么fn不会被执行，数组的唯一值将被返回。</li>
+</ul>
+<pre><code>var array = [1, 2, 3, 4];
+var s = array.reduce(function(previousValue, value, index, array)&#123;
+  return previousValue * value;
+&#125;,1);
+console.log(s); // 24
+// ES6写法更加简洁
+array.reduce((p, v) =&gt; p * v); // 24
+1234567</code></pre>
+<p>以上回调被调用4次，每次的参数和返回见下表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">callback</th>
+<th align="center">previousValue</th>
+<th align="center">currentValue</th>
+<th align="center">index</th>
+<th align="center">array</th>
+<th align="center">return value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">第1次</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">[1,2,3,4]</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">第2次</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">[1,2,3,4]</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">第3次</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">[1,2,3,4]</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">第4次</td>
+<td align="center">6</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">[1,2,3,4]</td>
+<td align="center">24</td>
+</tr>
+</tbody></table>
+<p>reduce 一样支持鸭式辨型，具体请参考every方法鸭式辨型写法。</p>
+<p>其在低版本IE（6~8）的兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#%E5%85%BC%E5%AE%B9%E6%97%A7%E7%8E%AF%E5%A2%83%EF%BC%88Polyfill%EF%BC%89">Polyfill</a>。</p>
+<h5 id="reduceRight"><a href="#reduceRight" class="headerlink" title="reduceRight"></a><strong>reduceRight</strong></h5><p>reduceRight() 方法接收一个方法作为累加器，数组中的每个值（从右至左）开始合并，最终为一个值。除了与reduce执行方向相反外，其他完全与其一致，请参考上述 reduce 方法介绍。</p>
+<p>其在低版本IE（6~8）的兼容写法请参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#.E5.85.BC.E5.AE.B9.E6.80.A7.E6.97.A7.E7.8E.AF.E5.A2.83.EF.BC.88Polyfill.EF.BC.89">Polyfill</a>。</p>
+<h5 id="entries-ES6"><a href="#entries-ES6" class="headerlink" title="entries(ES6)"></a><strong>entries(ES6)</strong></h5><p>entries() 方法基于<strong>ECMAScript 2015（ES6）规范</strong>，返回一个数组迭代器对象，该对象包含数组中每个索引的键值对。</p>
+<p>语法：<em>arr.entries()</em></p>
+<pre><code>var array = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+var iterator = array.entries();
+console.log(iterator.next().value); // [0, &quot;a&quot;]
+console.log(iterator.next().value); // [1, &quot;b&quot;]
+console.log(iterator.next().value); // [2, &quot;c&quot;]
+console.log(iterator.next().value); // undefined, 迭代器处于数组末尾时, 再迭代就会返回undefined
+123456</code></pre>
+<p>很明显，entries 也受益于鸭式辨型，如下：</p>
+<pre><code>var o = &#123;0:&quot;a&quot;, 1:&quot;b&quot;, 2:&quot;c&quot;, length:3&#125;;
+var iterator = Array.prototype.entries.call(o);
+console.log(iterator.next().value); // [0, &quot;a&quot;]
+console.log(iterator.next().value); // [1, &quot;b&quot;]
+console.log(iterator.next().value); // [2, &quot;c&quot;]
+12345</code></pre>
+<p>由于该方法基于ES6，因此目前并不支持所有浏览器，以下是各浏览器支持版本：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Browser</th>
+<th align="left">Chrome</th>
+<th align="left">Firefox (Gecko)</th>
+<th align="left">Internet Explorer</th>
+<th align="left">Opera</th>
+<th align="left">Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Basic support</td>
+<td align="left">38</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/Firefox/Releases/28">28</a> (28)</td>
+<td align="left">未实现</td>
+<td align="left">25</td>
+<td align="left">7.1</td>
+</tr>
+</tbody></table>
+<h5 id="find-amp-findIndex-ES6"><a href="#find-amp-findIndex-ES6" class="headerlink" title="find&amp;findIndex(ES6)"></a><strong>find&amp;findIndex(ES6)</strong></h5><p>find() 方法基于<strong>ECMAScript 2015（ES6）规范</strong>，返回数组中第一个满足条件的元素（如果有的话）， 如果没有，则返回undefined。</p>
+<p>findIndex() 方法也基于<strong>ECMAScript 2015（ES6）规范</strong>，它返回数组中第一个满足条件的元素的索引（如果有的话）否则返回-1。</p>
+<p>语法：<em>arr.find(fn, thisArg)<em>，</em>arr.findIndex(fn, thisArg)</em></p>
+<p>我们发现它们的语法与forEach等十分相似，其实不光语法，find（或findIndex）在参数及其使用注意事项上，均与forEach一致。因此此处将略去 find（或findIndex）的参数介绍。下面我们来看个例子🌰 ：</p>
+<pre><code>var array = [1, 3, 5, 7, 8, 9, 10];
+function f(value, index, array)&#123;
+  return value%2==0; // 返回偶数
+&#125;
+function f2(value, index, array)&#123;
+  return value &gt; 20; // 返回大于20的数
+&#125;
+console.log(array.find(f)); // 8
+console.log(array.find(f2)); // undefined
+console.log(array.findIndex(f)); // 4
+console.log(array.findIndex(f2)); // -1
+1234567891011</code></pre>
+<p>由于其鸭式辨型写法也与forEach方法一致，故此处略去。</p>
+<p>兼容性上我没有详测，可以知道的是，最新版的Chrome v47，以及Firefox的版本25均实现了它们。</p>
+<h5 id="keys-ES6"><a href="#keys-ES6" class="headerlink" title="keys(ES6)"></a><strong>keys(ES6)</strong></h5><p>keys() 方法基于<strong>ECMAScript 2015（ES6）规范</strong>，返回一个数组索引的迭代器。（浏览器实际实现可能会有调整）</p>
+<p>语法：<em>arr.keys()</em></p>
+<pre><code>var array = [&quot;abc&quot;, &quot;xyz&quot;];
+var iterator = array.keys();
+console.log(iterator.next()); // Object &#123;value: 0, done: false&#125;
+console.log(iterator.next()); // Object &#123;value: 1, done: false&#125;
+console.log(iterator.next()); // Object &#123;value: undefined, done: false&#125;
+12345</code></pre>
+<p>索引迭代器会包含那些没有对应元素的索引，如下：</p>
+<pre><code>var array = [&quot;abc&quot;, , &quot;xyz&quot;];
+var sparseKeys = Object.keys(array);
+var denseKeys = [...array.keys()];
+console.log(sparseKeys); // [&quot;0&quot;, &quot;2&quot;]
+console.log(denseKeys);  // [0, 1, 2]
+12345</code></pre>
+<p>其鸭式辨型写法请参考上述 entries 方法。</p>
+<p>前面我们用Array.from生成一个从0到指定数字的新数组，利用keys也很容易实现。</p>
+<pre><code>[...Array(10).keys()]; // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[...new Array(10).keys()]; // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+12</code></pre>
+<p>由于Array的特性，new Array 和 Array 对单个数字的处理相同，因此以上两种均可行。</p>
+<p>keys基于ES6，并未完全支持，以下是各浏览器支持版本：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Browser</th>
+<th align="center">Chrome</th>
+<th align="center">Firefox (Gecko)</th>
+<th align="center">Internet Explorer</th>
+<th align="center">Opera</th>
+<th align="center">Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Basic support</td>
+<td align="center">38</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/Firefox/Releases/28">28</a> (28)</td>
+<td align="center">未实现</td>
+<td align="center">25</td>
+<td align="center">7.1</td>
+</tr>
+</tbody></table>
+<h5 id="values-ES6"><a href="#values-ES6" class="headerlink" title="values(ES6)"></a><strong>values(ES6)</strong></h5><p>values() 方法基于<strong>ECMAScript 2015（ES6）规范</strong>，返回一个数组迭代器对象，该对象包含数组中每个索引的值。其用法基本与上述 entries 方法一致。</p>
+<p>语法：<em>arr.values()</em></p>
+<p>遗憾的是，现在没有浏览器实现了该方法，因此下面将就着看看吧。</p>
+<pre><code>var array = [&quot;abc&quot;, &quot;xyz&quot;];
+var iterator = array.values();
+console.log(iterator.next().value);//abc
+console.log(iterator.next().value);//xyz
+1234</code></pre>
+<h5 id="Symbol-iterator-ES6"><a href="#Symbol-iterator-ES6" class="headerlink" title="Symbol.iterator(ES6)"></a><strong>Symbol.iterator(ES6)</strong></h5><p>该方法基于<strong>ECMAScript 2015（ES6）规范</strong>，同 values 方法功能相同。</p>
+<p>语法：<em>arr<a href="">Symbol.iterator</a></em></p>
+<pre><code>var array = [&quot;abc&quot;, &quot;xyz&quot;];
+var iterator = array[Symbol.iterator]();
+console.log(iterator.next().value); // abc
+console.log(iterator.next().value); // xyz
+1234</code></pre>
+<p>其鸭式辨型写法请参考上述 entries 方法。</p>
+<p>由于该方法基于ES6，并未完全支持，以下是各浏览器支持版本：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Browser</th>
+<th align="center">Chrome</th>
+<th align="center">Firefox (Gecko)</th>
+<th align="center">Internet Explorer</th>
+<th align="center">Opera</th>
+<th align="center">Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Basic support</td>
+<td align="center">38</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/Firefox/Releases/36">36</a> (36) <a target="_blank" rel="noopener" href="http://louiszhai.github.io/2017/04/28/array/#respond">1</a></td>
+<td align="center">未实现</td>
+<td align="center">25</td>
+<td align="center">未实现</td>
+</tr>
+</tbody></table>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>以上，Array.prototype 的各方法基本介绍完毕，这些方法之间存在很多共性。比如：</p>
+<ul>
+<li>所有插入元素的方法, 比如 push、unshift，一律返回数组新的长度；</li>
+<li>所有删除元素的方法，比如 pop、shift、splice 一律返回删除的元素，或者返回删除的多个元素组成的数组；</li>
+<li>部分遍历方法，比如 forEach、every、some、filter、map、find、findIndex，它们都包含<code>function(value,index,array)&#123;&#125;</code> 和 <code>thisArg</code> 这样两个形参。</li>
+</ul>
+<p>Array.prototype 的所有方法均具有鸭式辨型这种神奇的特性。它们不止可以用来处理数组对象，还可以处理类数组对象。</p>
+<p>例如 javascript 中一个纯天然的类数组对象字符串（String），像join方法（不改变当前对象自身）就完全适用，可惜的是 Array.prototype 中很多方法均会去试图修改当前对象的 length 属性，比如说 pop、push、shift, unshift 方法，操作 String 对象时，由于String对象的长度本身不可更改，这将导致抛出TypeError错误。</p>
+<p>还记得么，Array.prototype本身就是一个数组，并且它的长度为0。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">vici</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://ymvici.github.io/2020/09/27/js-array-api/">http://ymvici.github.io/2020/09/27/js-array-api/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">vici</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/js/">
+                                    <span class="chip bg-color">js</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E7%BB%84API/">
+                                    <span class="chip bg-color">数组API</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/09/27/js-array-api/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="js_Array_API">
+                        
+                        <span class="card-title">js_Array_API</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84API/">
+                        <span class="chip bg-color">数组API</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/25/leetcode-part1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="LeetCode_part1">
+                        
+                        <span class="card-title">LeetCode_part1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%84/" class="post-category">
+                                    数据解构
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/easy/">
+                        <span class="chip bg-color">easy</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">vici</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
