@@ -4,6 +4,75 @@
   
     
     <entry>
+      <title>axios</title>
+      <link href="2020/10/18/axios/"/>
+      <url>2020/10/18/axios/</url>
+      
+        <content type="html"><![CDATA[<h1 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h1><p>axios是基于promise对ajax的一种封装</p><h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><pre><code>axios(&#123;     method: &#39;get&#39;,     url: &#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,&#125;).then(res =&gt; this.hotcity = res.data) axios.get(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;)     .then(res =&gt; this.hotcity = res.data) </code></pre><h3 id="携带参数的get请求"><a href="#携带参数的get请求" class="headerlink" title="携带参数的get请求"></a>携带参数的get请求</h3><pre><code>axios(&#123;     method: &#39;get&#39;,     url: &#39;http://elm.cangdu.org/v1/cities?type=hot?id=1&#39;,&#125;).then(res =&gt; this.hotcity = res.data) </code></pre><p> 或者</p><pre><code>axios(&#123;     method: &#39;get&#39;,     url: &#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,     params: &#123;         id: &#39;1&#39;     &#125;&#125;).then(res =&gt; this.hotcity = res.data) axios.get(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,     &#123;params:&#123;id:&#39;1&#39;&#125;&#125;     ).then(res =&gt; this.hotcity = res.data) </code></pre><h3 id="post方法"><a href="#post方法" class="headerlink" title="post方法"></a>post方法</h3><pre><code>axios(&#123;     method: &#39;post&#39;,     url: &#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,     data: &#123;         id: &#39;1&#39;     &#125;&#125;).then(res =&gt; this.hotcity = res.data) </code></pre><h2 id="axios的并发请求"><a href="#axios的并发请求" class="headerlink" title="axios的并发请求"></a>axios的并发请求</h2><p>第一种方法，返回来的是一个数组</p><pre><code>axios.all([    axios.get(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;),    axios.get(&#39;http://elm.cangdu.org/v1/cities?type=city&#39;,&#123;params:&#123;id:&#39;1&#39;&#125;&#125;)    ]).then(res =&gt; this.hotcity = res.data     ).catch( err=&gt; console.log(err))</code></pre><p>第二种方法</p><pre><code>axios.all([    axios.get(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;),    axios.get(&#39;http://elm.cangdu.org/v1/cities?type=city&#39;,&#123;params:&#123;id:&#39;1&#39;&#125;&#125;)    ]).then(        axios.spread((res1,res2) =&gt; &#123;            console.log(res1)            console.log(res2)        &#125;)     ).catch( err=&gt; console.log(err))</code></pre><h2 id="axios的全局配置"><a href="#axios的全局配置" class="headerlink" title="axios的全局配置"></a>axios的全局配置</h2><pre><code>axios.defaults.baseURL = &#39;http://elm.cangdu.org/v1&#39;axios.defaults.timeout = 5000axios.get(&#39;cities?type=hot&#39;).then(res =&gt; &#123;    console.log(res)&#125;)</code></pre><h2 id="axios的实例"><a href="#axios的实例" class="headerlink" title="axios的实例"></a>axios的实例</h2><pre><code>let newAxios = axios.create(&#123;    baseURL:&#39;http://elm.cangdu.org/v1&#39;    axios.defaults.timeout = 5000&#125;);</code></pre><h2 id="axios的拦截器"><a href="#axios的拦截器" class="headerlink" title="axios的拦截器"></a>axios的拦截器</h2><p>axios提供了两大类拦截器，一种是请求方向的拦截（成功请求，失败请求）；另一种是响应方的（成功请求，失败请求）</p><p>作用：用于网络请求在发起时或响应时对操作做出的响应处理</p><blockquote><p>发起请求时可以添加网页加载动画，使用token认证时检查是否携带token信息<br>响应时可以进行对数据进行相应的处理</p></blockquote><h3 id="请求方向"><a href="#请求方向" class="headerlink" title="请求方向"></a>请求方向</h3><p>客户端发送请求 –&gt; [请求拦截器]  –&gt; 服务器</p><pre><code>axios.interceptors.request.use(config =&gt;&#123; // config是发请求时携带的数据    // 携带token    let token = localStorage.getItem(&#39;token&#39;)    token &amp;&amp; (config.headers.Authorization = token) // 如果token存在则执行后面的语句    return config&#125;,error =&gt; &#123;    return Promise.reject(error)&#125;)axios.get(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,     &#123;params:&#123;id:&#39;1&#39;&#125;&#125;     ).then(res =&gt; this.hotcity = res.data) </code></pre><h3 id="响应方向"><a href="#响应方向" class="headerlink" title="响应方向"></a>响应方向</h3><pre><code>axios.interceptors.response.use(config=&gt; &#123;    console.log(&#39;进入响应拦截器&#39;)    console.log(config)    return config // 请求得到数据res对象&#125;).catch(err=&gt;&#123;    console.log(&#39;响应方向失败&#39;)    console.log(err)&#125;)axios.get(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,     &#123;params:&#123;id:&#39;1&#39;&#125;&#125;     ).then(res =&gt; this.hotcity = res.data) </code></pre><h2 id="axios封装"><a href="#axios封装" class="headerlink" title="axios封装"></a>axios封装</h2><p>初级封装</p><pre><code>import axios from &#39;axios&#39;export function request(config, success, fail) &#123;    axios(&#123;        url: config    &#125;).then(res =&gt; &#123;        success(res)    &#125;).catch(err=&gt; &#123;        fail(err)    &#125;)&#125;调用 import &#123;request&#125; from &#39;./network/request/request&#39;request(&#39;http://elm.cangdu.org/v1/cities?type=hot&#39;,res=&gt; &#123;    console.log(res)&#125;,err=&gt; &#123;    console.log(err)&#125;)</code></pre><p>封装到对象中</p><pre><code>import axios from &#39;axios&#39;export function request(config) &#123;    axios.default.baseURL = &#39;http://elm.cangdu.org/v1&#39;    axios(url: config.url).then(res =&gt; &#123;        config.success(res)    &#125;).catch(err=&gt; &#123;        config.fail(err)    &#125;)&#125;调用import &#123;request&#125; from &#39;./network/request/request&#39;request(&#123;    url: &#39;cities?type=hot&#39;,    success:res =&gt; &#123;        console.log(res)    &#125;,    fail:err =&gt; &#123;        console.log(res)    &#125;&#125;)</code></pre><p>使用promise</p><pre><code>import axios from &#39;axios&#39;export function request(config) &#123;    let newAxios = axios.create (&#123;        basrURL: &#39;http://elm.cangdu.org/v1&#39;,        timeout: 5000    &#125;);    return new Promise((resolve,reject) =&gt; &#123;        newAxios(config).then(res =&gt; &#123;            resovle(res)        &#125;).catch(err =&gt; &#123;            reject(err)        &#125;)        &#125;)&#125;调用import &#123;request&#125; from &#39;./network/request/request&#39;request(&#123;    url:&#39;cities?type=hot&#39;&#125;).then(res =&gt; &#123;    console.log(res);&#125;).catch(err =&gt; &#123;    console.log(err)&#125;)</code></pre><p>最终封装</p><pre><code>import axios from &#39;axios&#39;export function request(config) &#123;    let newAxios = axios.create (&#123;        basrURL: &#39;http://elm.cangdu.org/v1&#39;,        timeout: 5000    &#125;);    return newAxios(config)&#125;调用import &#123;request&#125; from &#39;./network/request/request&#39;request(&#123;    url: &#39;cities?type=hot&#39;&#125;).then(res =&gt;&#123;    console.log(res)&#125;)</code></pre><h1 id="qs库"><a href="#qs库" class="headerlink" title="qs库"></a>qs库</h1><h2 id="什么是qs"><a href="#什么是qs" class="headerlink" title="什么是qs?"></a>什么是qs?</h2><p>qs是一个流行的查询参数序列化和解析库。可以将一个普通的object序列化成一个查询字符串，或者反过来将一个查询字符串解析成一个object,帮助我们查询字符串解析和序列化字符串。</p><h2 id="vue中qs安装使用"><a href="#vue中qs安装使用" class="headerlink" title="vue中qs安装使用"></a>vue中qs安装使用</h2><ul><li>步骤：<ul><li>打开控制台输入：<code>npm install qs</code></li><li>在main.js中导入qs插件：<code>import qs from &#39;qs&#39;</code></li><li>在main.js中配置全局属性：<code>Vue.prototype.$qs = qs</code></li></ul></li></ul><h2 id="方法：qs-parse-和qs-stringify"><a href="#方法：qs-parse-和qs-stringify" class="headerlink" title="方法：qs.parse()和qs.stringify()"></a>方法：<strong>qs.parse()和qs.stringify()</strong></h2><ul><li><p><strong>qs.parse()是将URL解析成对象的形式</strong></p><pre><code>const str = &quot;username=&#39;admin&#39;&amp;password=&#39;admin&#39;&quot; console.log(qs.parse(str)) // Object &#123; username: &quot;admin&quot;, password: &quot;admin&quot; &#125;</code></pre></li><li><p><strong>qs.stringify()是将对象 序列化成URL的形式，以&amp;进行拼接</strong></p><pre><code>qs.stringify(&#123;username:&#39;admin&#39;, password:&#39;admin&#39;&#125;)//username=admin&amp;password=admin</code></pre></li></ul><p><a href="https://blog.csdn.net/sansan_7957/article/details/82227040">https://blog.csdn.net/sansan_7957/article/details/82227040</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo操作</title>
+      <link href="2020/10/18/hexo-cao-zuo/"/>
+      <url>2020/10/18/hexo-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<p>创建新的md文档</p><blockquote><p>hexo new 文档名 在source/_posts目录下</p></blockquote><p>hexo clean</p><p>hexo s</p><p>hexo clean &amp;&amp; hexo g</p><p>hexo d</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>正则表达式</title>
+      <link href="2020/09/29/zheng-ze-biao-da-shi/"/>
+      <url>2020/09/29/zheng-ze-biao-da-shi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 正则表达式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS_spring_API</title>
       <link href="2020/09/28/js-spring-api/"/>
       <url>2020/09/28/js-spring-api/</url>
